@@ -14,7 +14,7 @@ public class Q5 {
         int b = (int)y;
         int c = (int)z;
         //평균값 구하기
-        float avg = (a+b+c)/3;
+        float avg = (a+b+c)/3.0f;
         //출력
         System.out.println(avg);
     }
