@@ -11,7 +11,7 @@ public class Q2 {
 
         int newNum = (int) d; // double d를 강제로 int 형변환
 
-        result = d-newNum; // (double) result = (double) d - (int) newNum
+        result = d - newNum; // (double) result = (double) d - (int) newNum
 
         System.out.println(result); // result는 double 이기 때문에 결과 값을 소수점까지 표시 가능
     }
