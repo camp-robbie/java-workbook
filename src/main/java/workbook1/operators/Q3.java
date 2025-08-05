@@ -7,7 +7,7 @@ public class Q3 {
         Scanner sc = new Scanner(System.in);
         double x = sc.nextDouble();
         double y = sc.nextDouble();
-        // TODO: x > y 결과와 !(x > y) 결과
+        // x > y 결과와 !(x > y) 결과
         boolean b = x>y;
         boolean d = !(x>y);
         //출력
