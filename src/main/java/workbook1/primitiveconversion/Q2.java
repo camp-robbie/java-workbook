@@ -7,5 +7,11 @@ public class Q2 {
         Scanner sc = new Scanner(System.in);
         double d = sc.nextDouble();
         // TODO: d를 int로 강제 형변환하여 차이를 계산 후 출력
+        // d를 int로 강제 형변환
+        int i = (int) d;
+        // 차이 계산
+        double sub = d - i;
+        // 출력
+        System.out.println(sub);
     }
 }
