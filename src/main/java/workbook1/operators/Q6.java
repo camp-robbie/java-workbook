@@ -8,5 +8,7 @@ public class Q6 {
         int x = sc.nextInt();
         int y = sc.nextInt();
         // TODO: x와 y 중 큰 값에 5를 곱해 출력
+        int result = (x > y) ? x : y;
+        System.out.print(result * 5);
     }
 }
