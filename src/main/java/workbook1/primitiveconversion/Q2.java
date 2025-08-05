@@ -6,6 +6,15 @@ public class Q2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double d = sc.nextDouble();
-        // TODO: d를 int로 강제 형변환하여 차이를 계산 후 출력
+
+        //강제 형변환(double->int) 값 변수 i에 담기
+        int i = (int) d;
+
+        //강제 형변환값과 원래 값 차이 구하기
+        double diff = d-i;
+
+        //출력
+        System.out.println(diff);
+
     }
 }
