@@ -1,6 +1,5 @@
 package main.java.workbook1.loops;
 
-import org.w3c.dom.ls.LSOutput;
 
 import java.util.Scanner;
 
