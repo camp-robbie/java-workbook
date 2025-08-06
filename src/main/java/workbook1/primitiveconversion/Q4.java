@@ -15,10 +15,9 @@ public class Q4 {
 
         int f1i = (int) f1;
         double f2i = (double) f2;
-        result = f1i + f2i ;
+        double result = f1i + f2i ;
 
-        System.out.println("계산 결과:" + result);
-
+        System.out.println("계산 결과(float+double):" + result);
 
     }
 }
