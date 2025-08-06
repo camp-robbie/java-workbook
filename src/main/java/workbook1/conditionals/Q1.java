@@ -7,5 +7,13 @@ public class Q1 {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
         // TODO: num의 부호를 판단하여 출력
+
+        if (num == 0) {
+            System.out.println("0");
+        } else if (num > 0) {
+            System.out.println("Positive Number");
+        } else if (num < 0) {
+            System.out.println("Negative Number");
+        }
     }
 }
