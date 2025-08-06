@@ -7,6 +7,8 @@ public class Q3 {
         Scanner sc = new Scanner(System.in);
         double x = sc.nextDouble();
         double y = sc.nextDouble();
-        // TODO: x &gt; y 결과와 !(x &gt; y) 결과 출력
+
+        boolean result = x > y; // 논리 연산 후 결과를 true or false로 출력
+        System.out.println(result + " " + !result); // !not 연산자를 활용하여 다시 비교 값을 출력
     }
 }
