@@ -8,6 +8,10 @@ public class Q4 {
         int a = sc.nextInt();
         int b = sc.nextInt();
         int c = sc.nextInt();
-        // TODO: b가 a보다 크고 c보다 작은지 평가하여 출력
+
+        boolean result = a < b && b < c; // b가 a보다 크고 b가 c보다 작은지 논리 연산 후 결과 저장
+        System.out.println(result);
+
+        sc.close(); // 자원 누수 방지
     }
 }
