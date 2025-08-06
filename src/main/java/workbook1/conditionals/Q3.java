@@ -30,17 +30,16 @@ public class Q3 {
                 // 평균이 80 이상 90 미만이라면
                 System.out.println("B");
             }
-        }else if (avg>=60) {
-            // 평균이 60 이상이며 70 이상이라면
-            if (avg >= 70) {
-                System.out.println("C");
-            } else {
-                // 평균이 60 이상이며 70 미만이라면
-                System.out.println("D");
-            }
         }else {
-            // 평균이 60 미만이라면
-            System.out.println("F");
+            if (avg>=70){
+                System.out.println("C");
+            }else {
+                if (avg>=60){
+                    System.out.println("D");
+                }else {
+                    System.out.println("F");
+                }
+            }
         }
 
     }
