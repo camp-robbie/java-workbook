@@ -7,6 +7,9 @@ public class Q6 {
         Scanner sc = new Scanner(System.in);
         int x = sc.nextInt();
         int y = sc.nextInt();
-        // TODO: x와 y 중 큰 값에 5를 곱해 출력
+
+        int result = (x > y ? x : y) * 5; // x와 y 중 큰 값에 5를 곱해 출력
+        System.out.println(result);
+        sc.close(); // 자원 누수 방지
     }
 }
