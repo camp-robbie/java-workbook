@@ -16,7 +16,8 @@ public class Q2 {
         // 차이를 계산 후 출력
         double result = doubleNumber - intNumber;
         System.out.println("result = " + result);
-        
+
+        sc.close();
         
 
     }

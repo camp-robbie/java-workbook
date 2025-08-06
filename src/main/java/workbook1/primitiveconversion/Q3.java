@@ -24,5 +24,6 @@ public class Q3 {
         float result = (float) sum;
         System.out.println("result = " + result);
 
+        sc.close();
     }
 }

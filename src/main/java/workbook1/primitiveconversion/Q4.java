@@ -19,5 +19,7 @@ public class Q4 {
         // 합산 후 출력
         double result = intNumber + doubleNumber;
         System.out.println("result = " + result);
+
+        sc.close();
     }
 }

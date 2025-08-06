@@ -22,5 +22,7 @@ public class Q1 {
         // 출력
         System.out.println("intnumber = " + intnumber);
 
+        sc.close();
+
     }
 }

@@ -24,5 +24,7 @@ public class Q5 {
         float result = (xx + yy + zz) / 3;
         System.out.println("result = " + result);
 
+        sc.close();
+
     }
 }
