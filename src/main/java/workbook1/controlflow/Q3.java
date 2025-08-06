@@ -7,5 +7,17 @@ public class Q3 {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         // TODO: 1~n까지의 소수를 찾아 출력
+
+        for (int i = 2; i <=n ; i++) {
+            for (int j = 2; j <= i; j++) {
+                if(i == j){
+                    System.out.println(i);
+                    break;
+                }
+                if( (i % j) == 0 ){
+                    break;
+                }
+            }
+        }
     }
 }

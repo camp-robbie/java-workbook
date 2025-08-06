@@ -7,5 +7,9 @@ public class Q2 {
         Scanner sc = new Scanner(System.in);
         double d = sc.nextDouble();
         // TODO: d를 int로 강제 형변환하여 차이를 계산 후 출력
+
+        System.out.println(d);
+        System.out.println((int)d);
+        System.out.println( d -((int)d)  );
     }
 }
