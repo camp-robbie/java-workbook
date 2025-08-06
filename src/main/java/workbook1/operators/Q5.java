@@ -8,6 +8,9 @@ public class Q5 {
         int a = sc.nextInt();
         int b = sc.nextInt();
         int c = sc.nextInt();
-        // TODO: a += b * c 연산 후 a, b, c 출력
+
+        a += (b * c); // a에 b*c의 값을 더하면서 저장한다.
+        System.out.println(a + " " + b + " " + c);
+        sc.close(); // 자원 누수 방지
     }
 }
