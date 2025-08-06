@@ -9,7 +9,8 @@ public class Q3 {
         int s2 = sc.nextInt();
         int s3 = sc.nextInt();
         //평균 계산
-        double avg = (s1+s2+s3)/3;
+        double avg = (double)(s1+s2+s3)/3;
+        //double avg = (s1+s2+s3)/3; >> int 나누기 int = int값이라 앞에 double 의미가 없어짐
         //중첩 if-else로 학점 출력
         if (avg >= 90){
             System.out.println("학점 : A");
