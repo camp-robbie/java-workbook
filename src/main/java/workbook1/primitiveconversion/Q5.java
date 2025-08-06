@@ -20,6 +20,9 @@ public class Q5 {
         int yy = (int) y;
         int zz = (int) z;
 
+        // 평균을 float으로 출력
+        float result = (xx + yy + zz) / 3;
+        System.out.println("result = " + result);
 
     }
 }
