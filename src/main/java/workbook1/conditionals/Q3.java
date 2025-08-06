@@ -42,5 +42,6 @@ public class Q3 {
             // 평균이 60 미만이라면
             System.out.println("F");
         }
+
     }
 }
