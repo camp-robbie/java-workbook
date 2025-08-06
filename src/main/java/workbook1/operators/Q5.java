@@ -9,5 +9,14 @@ public class Q5 {
         int b = sc.nextInt();
         int c = sc.nextInt();
         // TODO: a += b * c 연산 후 a, b, c 출력
+<<<<<<< Updated upstream
+=======
+        // a = (a + b) * c
+
+
+
+
+
+>>>>>>> Stashed changes
     }
 }
