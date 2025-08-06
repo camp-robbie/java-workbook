@@ -19,12 +19,12 @@ public class Q3 {
 
         float result = sum; // float으로 자동 형변환
 
-        // 출력
+
 //        System.out.println("lb = " + lb);
 //        System.out.println("ls = " + ls);
 //        System.out.println("li = " + li);
 //        System.out.println("l = " + l);
 //        System.out.println("sum = " + sum);
-        System.out.println(result);
+        System.out.println(result); // 출력
     }
 }

@@ -21,6 +21,6 @@ public class Q5 {
 //        System.out.println("iy = " + iy);
 //        System.out.println("iz = " + iz);
 //        System.out.println("avg = " + avg);
-        System.out.println("avgf = " + avgf);
+        System.out.println("avgf = " + avgf); // 출력
     }
 }

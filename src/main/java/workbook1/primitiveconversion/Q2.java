@@ -13,9 +13,8 @@ public class Q2 {
 
         double result = d - i; // 차이 계산
 
-        // 출력
 //        System.out.println("d = " + d);
 //        System.out.println("i = " + i);
-        System.out.printf("%.2f\n", result);
+        System.out.printf("%.2f\n", result); // 출력
     }
 }

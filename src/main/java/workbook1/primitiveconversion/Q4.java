@@ -14,9 +14,9 @@ public class Q4 {
 
         double result = d + i; // 합산
 
-        // 출력
+
 //        System.out.println("i = " + i);
 //        System.out.println("d = " + d);
-        System.out.printf("%.1f\n", result);
+        System.out.printf("%.1f\n", result); // 출력
     }
 }

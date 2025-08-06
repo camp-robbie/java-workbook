@@ -13,10 +13,10 @@ public class Q1 {
 
         int result = (int) sum; // int로 강제 형변환
 
-        // 출력
+
 //        System.out.println("a = " + a);
 //        System.out.println("b = " + b);
 //        System.out.println("sum = " + sum);
-        System.out.println(result);
+        System.out.println(result); // 출력
     }
 }
