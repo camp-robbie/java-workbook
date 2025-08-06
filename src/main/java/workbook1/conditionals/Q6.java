@@ -10,7 +10,7 @@ public class Q6 {
         // TODO: BMI 계산 후 조건문으로 등급 출력
 
         // BMI 계산
-        double bmi = weight / Math.pow((heightCm * 100), 2);
+        double bmi = weight / Math.pow((heightCm / 100), 2);
 
         // if-else로 등급 출력
         if (bmi > 30) {
