@@ -22,6 +22,5 @@ public class Q1 {
         System.out.println("mod = " + mod);
 
 
-
     }
 }
