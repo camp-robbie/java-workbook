@@ -7,15 +7,22 @@ public class Q3 {
         Scanner sc = new Scanner(System.in);
 
         // 숫자를 입력 받기
-        System.out.println("b: ");
+        System.out.print("b: ");
         byte b = sc.nextByte();
-        System.out.println("s: ");
+        System.out.print("s: ");
         short s = sc.nextShort();
-        System.out.println("i: ");
+        System.out.print("i: ");
         int i = sc.nextInt();
-        System.out.println("j: ");
+        System.out.print("j: ");
         long l = sc.nextLong();
         // TODO: b, s, i, l을 long으로 변환해 합산 후 float으로 변환하여 출력
+
+        // long으로 변환해 합산
+        long sum = b + s + i + l;
+
+        // float으로 변환하여 출력
+        float result = (float) sum;
+        System.out.println("result = " + result);
 
     }
 }
