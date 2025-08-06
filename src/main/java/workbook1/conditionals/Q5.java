@@ -8,7 +8,7 @@ public class Q5 {
         int a = sc.nextInt();
         int b = sc.nextInt();
         int c = sc.nextInt();
-        // TODO: a, b, c 중 최대값 또는 같은 값 여부 출력
+        // TODO: a, b, c 중 최대값 또는 같은 값 여부 출력 함
 
         if (a == b && b == c) {
             System.out.println("세 수가 모두 같습니다: " + a);

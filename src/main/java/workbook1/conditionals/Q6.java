@@ -8,7 +8,7 @@ public class Q6 {
         Scanner sc = new Scanner(System.in);
         double weight = sc.nextDouble();
         double heightCm = sc.nextDouble();
-        // TODO: BMI 계산 후 조건문으로 등급 출력
+        // TODO: BMI 계산 후 조건문으로 등급 출력 함
 
         double heightM = heightCm / 100.0;
         double bmi = weight / (heightM * heightM);
