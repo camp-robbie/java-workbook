@@ -8,5 +8,10 @@ public class Q3 {
         double x = sc.nextDouble();
         double y = sc.nextDouble();
         // TODO: x &gt; y 결과와 !(x &gt; y) 결과 출력
+
+        boolean result =  x > y;
+        boolean result2 = !(x > y);
+
+        System.out.println(result + " " + result2);
     }
 }
