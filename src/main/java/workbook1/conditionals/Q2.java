@@ -32,5 +32,8 @@ public class Q2 {
             default:
                 System.out.println("잘못된 입력입니다. 1부터 7까지만 입력 가능합니다.");
         }
+
+        sc.close();;
+
     }
 }

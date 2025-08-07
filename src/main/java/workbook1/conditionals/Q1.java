@@ -15,5 +15,8 @@ public class Q1 {
         } else {
             System.out.println("양수");
         }
+
+        sc.close();;
+
     }
 }

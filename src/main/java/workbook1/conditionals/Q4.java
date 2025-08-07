@@ -23,8 +23,8 @@ public class Q4 {
             System.out.println("평년");   // 4 단계. ! 4의 배수
         }
 
-         // * 2. 조건문 활용
-         // (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)
+        // * 2. 조건문 활용
+        // (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)
 //        if (year % 4 == 0 && year % 100 != 0) {
 //            System.out.println("윤년");
 //        } else if (year % 400 == 0) {
@@ -40,5 +40,8 @@ public class Q4 {
 //        } else {
 //            System.out.println("평년");
 //        }
+
+        sc.close();
+
     }
 }

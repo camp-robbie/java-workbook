@@ -48,5 +48,8 @@ public class Q5 {
 //        } else {
 //            System.out.println(Math.max(a, Math.max(b, c)));
 //        }
+
+        sc.close();
+
     }
 }
