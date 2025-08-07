@@ -23,7 +23,7 @@ public class Q4 {
             System.out.println("평년");   // 4 단계. ! 4의 배수
         }
 
-        // * 2. 조건문 활용
+        // 2. 조건문 활용
         // (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)
 //        if (year % 4 == 0 && year % 100 != 0) {
 //            System.out.println("윤년");

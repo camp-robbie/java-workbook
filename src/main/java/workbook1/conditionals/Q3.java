@@ -26,25 +26,27 @@ public class Q3 {
             System.out.println("F");
         }
 
+        /*
         // solution
-//        double average = (s1 + s2 + s3) / 3.0;
-//        if (average >= 90) {
-//            System.out.println("A");
-//        } else {
-//            if (average >= 80) {
-//                System.out.println("B");
-//            } else {
-//                if (average >= 70) {
-//                    System.out.println("C");
-//                } else {
-//                    if (average >= 60) {
-//                        System.out.println("D");
-//                    } else {
-//                        System.out.println("F");
-//                    }
-//                }
-//            }
-//        }
+        double average = (s1 + s2 + s3) / 3.0;
+        if (average >= 90) {
+            System.out.println("A");
+        } else {
+            if (average >= 80) {
+                System.out.println("B");
+            } else {
+                if (average >= 70) {
+                    System.out.println("C");
+                } else {
+                    if (average >= 60) {
+                        System.out.println("D");
+                    } else {
+                        System.out.println("F");
+                    }
+                }
+            }
+        }
+        */
 
         sc.close();
 

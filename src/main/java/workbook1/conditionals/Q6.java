@@ -23,6 +23,7 @@ public class Q6 {
             System.out.println("저체중");
         }
 
+        /*
         // solution
         double heightM = heightCm / 100.0;  // cm를 m으로 변환
         double bmi = weight / (heightM * heightM);
@@ -40,6 +41,7 @@ public class Q6 {
                 }
             }
         }
+        */
 
         sc.close();
     }
