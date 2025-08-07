@@ -22,6 +22,7 @@ public class Q3 {
 
             double positive = (double) sum / count; // (double로 형변환) 양수의 합 / 입력된 횟수
             System.out.println("양수들의 평균 = " + positive);
+            sc.close(); // 자원 누수 방지
         } catch (InputMismatchException e) {
             System.out.println("숫자만 입력해주세요!");
         }
