@@ -12,11 +12,12 @@ public class Q6 {
                 continue;                       // 다음 반복으로 넘어감
             }
 
-            sum += i;                           // sum = sum + i;
-
-            if(sum>= 40) {                      // sum이 40 이상이면
+            if(i >= 40) {                      // i이 40 이상이면
                 break;                          // 반복을 종료함
             }
+
+            sum += i;                          // sum = sum + i;
+
         }
         System.out.println(sum);                // 최종 합 출력
     }
