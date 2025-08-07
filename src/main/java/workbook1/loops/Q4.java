@@ -12,7 +12,8 @@ public class Q4 {
             int n = sc.nextInt(); // 열의 값
 
             // TODO: 이중 for 문으로 별 패턴 출력
-            if (n < 0 || m < 0) { // n이나 m이 0 미만일 때 예외처리
+            // 0을 입력 시 음수와 마찬가지로 아무런 결과가 출력되지 않아서 1 이상을 입력하도록 예외 처리
+            if (n < 1 || m < 1) { // n이나 m이 1 미만일 때 예외처리
                 throw new IllegalArgumentException();
             }
 
@@ -24,8 +25,10 @@ public class Q4 {
             }
         } catch (InputMismatchException e) { // 입력 값이 불일치할 때 발생
             System.out.println("숫자만 입력해주세요!");
-        } catch (IllegalArgumentException e) { // 음수가 입력되었을 때 발생
-            System.out.println("음수를 입력하실 수 없습니다!");
+        } catch (IllegalArgumentException e) { // 조건문에서 발생 시킨 예외를 잡은 후 예외처리
+            System.out.println("1이상의 값을 입력해주세요!");
         }
+
+        sc.close(); // 자원 손실 방지
     }
 }

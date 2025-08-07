@@ -30,7 +30,9 @@ public class Q2 {
         } catch (InputMismatchException e) { // InputMismatchException은 입력 값이 불일치 할 시 발생하는 예외처리
             System.out.println("숫자만을 입력해주세요."); // 숫자 이외의 값을 입력 시 예외처리
         } catch (IllegalArgumentException e) { // 조건문으로 생성한 예외를 catch로 잡아서 메세지를 출력한다.
-            System.out.println("0이상의 값을 입력해주세요..");
+            System.out.println("0 이상의 값을 입력해주세요..");
         }
+
+        sc.close(); // 자원 손실 방지
     }
 }
