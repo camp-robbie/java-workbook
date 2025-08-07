@@ -29,6 +29,6 @@ public class Q4 {
             System.out.println("1이상의 값을 입력해주세요!");
         }
 
-        sc.close(); // 자원 손실 방지
+        sc.close(); // 자원 누수 방지
     }
 }
