@@ -17,5 +17,8 @@ public class Q1 {
 
         // 계산 결과 한 줄에 출력
         System.out.println(sum + " " + sub + " " + mul + " " + div + " " + mod);
+
+        sc.close();
+
     }
 }

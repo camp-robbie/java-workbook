@@ -13,5 +13,7 @@ public class Q5 {
 
         a += b * c;
         System.out.println(a + " " + b + " " + c);
+
+        sc.close();
     }
 }

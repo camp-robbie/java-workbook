@@ -16,5 +16,13 @@ public class Q4 {
 //        } else {
 //            System.out.println(false);
         }
+
+        /*
+        // solution
+        boolean result = (b > a) && (b < c);
+        System.out.println(result);
+        */
+
+        sc.close();
     }
 }

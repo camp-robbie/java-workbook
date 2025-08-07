@@ -13,5 +13,15 @@ public class Q3 {
         boolean result2 = !(x > y);
 
         System.out.println(result + " " + result2);
+
+        // solution
+        /*
+        boolean comparison = x > y;
+        boolean notComparison = !comparison;
+
+        System.out.println(comparison + " " + notComparison);
+        */
+
+        sc.close();
     }
 }
