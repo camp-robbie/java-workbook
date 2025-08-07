@@ -10,6 +10,9 @@ public class Q3 {
         try {
             int n = sc.nextInt();
 
+            if(n<1){
+                throw new IllegalArgumentException();
+            }
             // TODO: 1~n까지의 소수를 찾아 출력
             for (int i = 2; i <= n; i++) { // 1은 소수가 아니임으로 2부터 시작, 입력 값 이하까지 반복
                 boolean prime = true; // 기본 값을 true로 설정하고
@@ -28,6 +31,8 @@ public class Q3 {
             }
         } catch (InputMismatchException e) { // 숫자 이외의 값을 입력 시 예외처리
             System.out.println("숫자만을 입력해 주세요!");
+        } catch (IllegalArgumentException e) {
+            System.out.println("1 이상의 숫자만 입력해주세요!");
         }
     }
 }
