@@ -6,6 +6,11 @@ public class Q5 {
         for (int i = 1; i <= 5; i++) {
             for (int j = 1; j <= 5; j++) {
                 // TODO: i + j == 6이면 위치 출력 후 라벨 break
+                int sum = i+j;
+                if(sum==6){
+                    System.out.println("(" + i +" , " + j + ")");
+                    break outer;
+                }
             }
         }
     }
