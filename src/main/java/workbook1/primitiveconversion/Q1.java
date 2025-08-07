@@ -25,5 +25,8 @@ public class Q1 {
 
         // 출력
         System.out.println("계산 결과 : " + result);
+
+        sc.close();
+
     }
 }

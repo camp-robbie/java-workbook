@@ -6,7 +6,7 @@ public class Q2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("실수를 입력하세요 : ");
+        System.out.print("실수를 입력하세요 : ");
 
         double d = sc.nextDouble();
         // TODO: d를 int로 강제 형변환하여 차이를 계산 후 출력
@@ -19,5 +19,8 @@ public class Q2 {
 
         // 출력
         System.out.println("계산 결과 : " + sub);
+
+        sc.close();
+
     }
 }
