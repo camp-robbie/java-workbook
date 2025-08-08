@@ -7,6 +7,12 @@ public class Q4 {
         Scanner sc = new Scanner(System.in);
         int m = sc.nextInt();
         int n = sc.nextInt();
-        // TODO: 이중 for 문으로 별 패턴 출력
+        //이중 for 문으로 별 패턴 출력
+        for(int i = 0; i<m; i++){
+            for(int j = 0 ; j<n; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 }
