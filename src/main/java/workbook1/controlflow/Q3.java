@@ -7,5 +7,7 @@ public class Q3 {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         // TODO: 1~n까지의 소수를 찾아 출력
+
+
     }
 }
