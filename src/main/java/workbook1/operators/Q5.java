@@ -8,6 +8,12 @@ public class Q5 {
         int a = sc.nextInt();
         int b = sc.nextInt();
         int c = sc.nextInt();
+
+        a+= b * c;
+
+        System.out.print(a + " ");
+        System.out.print(b + " ");
+        System.out.print(c);
         // TODO: a += b * c 연산 후 a, b, c 출력
     }
 }
