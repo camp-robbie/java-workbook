@@ -31,7 +31,7 @@ public class Q3 {
 //            }
 //        }
 
-        // 네 번째 시도 - 지피티 도움 받아 작성
+        // 네 번째 시도 - 지피티 도움 받아 작성, 하지만 코드 해석이 안 된다,,,
         for (int i = 2; i <= n; i++) {
             boolean isPrime = true;
 
