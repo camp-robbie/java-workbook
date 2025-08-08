@@ -7,5 +7,11 @@ public class Q5 {
         Scanner sc = new Scanner(System.in);
         int h = sc.nextInt();
         // TODO: 역삼각형 패턴 출력
+
+        for (int i = 0; i < h; i++) {
+            System.out.print("*");
+        }
+        System.out.println();
     }
 }
+
