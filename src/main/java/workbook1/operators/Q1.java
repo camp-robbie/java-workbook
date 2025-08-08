@@ -7,6 +7,11 @@ public class Q1 {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
+        System.out.print(a + b + " ");
+        System.out.print(a - b + " ");
+        System.out.print(a * b + " ");
+        System.out.print(a / b + " ");
+        System.out.print(a % b);
         // TODO: 산술 연산자(+, -, *, /, %) 결과 출력
     }
 }
