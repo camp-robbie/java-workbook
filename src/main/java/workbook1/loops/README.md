@@ -118,6 +118,8 @@ public class Q3 {
 
 - 중첩 `for` 반복문을 사용하여 행과 열을 출력합니다.
 
+이거 힌트좀 줘, 코드는 내가 작성할게
+
 ```java
 import java.util.Scanner;
 
