@@ -43,34 +43,11 @@ public class Q1 {
                     if (q.handleInvalidInput(sc)) {
                         break;
                     }
-//                    System.out.println("n은 1 이상의 정수여야 합니다.\n" + "재입력하시겠습니까? (No 입력 시 종료)");
-//
-//                    sc.nextLine();
-//                    String no = sc.nextLine();
-//
-//                    if ("No".equalsIgnoreCase(no)) {
-//                        System.out.println("프로그램을 종료합니다.");
-//                        return;
-//                    } else {
-//                        System.out.println("1 이상의 정수로 재입력 바랍니다.");
-//                    }
                 }
             } catch (InputMismatchException e) {
                 if (q.handleInvalidInput(sc)) {
                     break;
                 }
-
-//                System.out.println("n은 1 이상의 정수여야 합니다.\n" + "재입력하시겠습니까? (No 입력 시 종료)");
-//
-//                sc.nextLine();  // 버퍼 비우기 안 하면, 무한 루프
-//                String no = sc.nextLine();
-//
-//                if ("No".equalsIgnoreCase(no)) {
-//                    System.out.println("프로그램을 종료합니다.");
-//                    return;
-//                } else {
-//                    System.out.println("1 이상의 정수로 재입력 바랍니다.");
-//                }
             }
         }
 
