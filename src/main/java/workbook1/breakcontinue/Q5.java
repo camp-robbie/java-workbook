@@ -8,7 +8,7 @@ public class Q5 {
 
                 // TODO: i + j == 6이면 위치 출력 후
                 if (i + j == 6) {
-                    System.out.println((i + "," + j)); // 위치 출력
+                    System.out.println("(" + i + "," + j + ")" ); // 위치 출력
                     break outer; // 라벨 break;
                 }
             }
