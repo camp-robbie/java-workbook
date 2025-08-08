@@ -9,21 +9,32 @@ public class Q4 {
         Scanner sc = new Scanner(System.in);
         // TODO: 0이 나올 때까지 양수만 합산하는 코드 작성
 
-        List<Integer> numbers = new ArrayList<>();
+        int sum = 0;
 
         while (true) {
             int n = sc.nextInt();
-            if (n == 0) break;
-            numbers.add(n);
-        }
-
-        int sum = 0;
-        for (int i = 0; i < numbers.size(); i++) {
-            int num = numbers.get(i);
-            if (num > 0 ) {
-                sum += num;
+            if (n > 0) {
+                sum += n;
+            } else if (n == 0) {
+                break;
             }
         }
+
+//        List<Integer> numbers = new ArrayList<>();
+//
+//        while (true) {
+//            int n = sc.nextInt();
+//            if (n == 0) break;
+//            numbers.add(n);
+//        }
+//
+//        int sum = 0;
+//        for (int i = 0; i < numbers.size(); i++) {
+//            int num = numbers.get(i);
+//            if (num > 0 ) {
+//                sum += num;
+//            }
+//        }
 
         System.out.println(sum);
 
