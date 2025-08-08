@@ -11,13 +11,13 @@ public class Q5 {
         int temp = 0;              // 자리수 합을 임시 저장할 변수 temp 선언 (초기값 : 0)
 
         while (true) {             // break 할 때까지 무한 반복 (내부 조건 만족시까지)
-                temp += num % 10;  // [ num % 10 -> 마지막 자리 ] temp에 합산
-                num /= 10;         // [ num / 10 -> 마지막 자리 제외한 숫자 ] num에 대입
-                if (num == 0) {    // 한 라운드(자리수의 합)가 끝난 경우
-                    num = temp;    // 각 자리수 합을 num에 대입
-                    temp = 0;      // 임시값 temp 초기화
-                    if (num < 10){ // 각 자리수 합이 한 자리 수가 되면
-                        break;     // 반복문 종료
+            temp += num % 10;  // [ num % 10 -> 마지막 자리 ] temp에 합산
+            num /= 10;         // [ num / 10 -> 마지막 자리 제외한 숫자 ] num에 대입
+            if (num == 0) {    // 한 라운드(자리수의 합)가 끝난 경우
+                num = temp;    // 각 자리수 합을 num에 대입
+                temp = 0;      // 임시값 temp 초기화
+                if (num < 10){ // 각 자리수 합이 한 자리 수가 되면
+                    break;     // 반복문 종료
                     }
                 }
         }
