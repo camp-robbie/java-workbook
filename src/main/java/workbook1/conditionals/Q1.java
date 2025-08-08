@@ -6,6 +6,15 @@ public class Q1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
+
         // TODO: num의 부호를 판단하여 출력
+        if (num < 0) {
+            System.out.println("음수");
+        } else if (num > 0) {
+            System.out.println("양수");
+        } else {
+            System.out.println("0");
+        }
+        sc.close(); // 자원 누수 방지
     }
 }
