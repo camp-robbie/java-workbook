@@ -9,6 +9,11 @@ public class Q3 {
         short s = sc.nextShort();
         int i = sc.nextInt();
         long l = sc.nextLong();
+
+        long sum = b + s + i + l; // promote b, s, i to long and sum
+
+        System.out.println((float)sum); // cast sum to float
+
         // TODO: b, s, i, l을 long으로 변환해 합산 후 float으로 변환하여 출력
     }
 }
