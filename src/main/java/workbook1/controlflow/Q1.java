@@ -6,26 +6,27 @@ import java.util.Scanner;
 public class Q1 {
 
     // 입출력 분리
-    public void InputOutput(Scanner sc) {
+    public boolean handleInvalidInput(Scanner sc) {
 
         System.out.println("n은 1 이상의 정수여야 합니다.\n" + "재입력하시겠습니까? (No 입력 시 종료)");
 
-        sc.nextLine();
         String no = sc.nextLine();
 
         if ("No".equalsIgnoreCase(no)) {
             System.out.println("프로그램을 종료합니다.");
-            return;
-        } else {
-            System.out.println("1 이상의 정수로 재입력 바랍니다.");
+            return true;
         }
+        else if (no.matches("\\d+")) {
+            return false;
+        }
+        return false;
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         // TODO: 짝수는 합, 홀수는 곱에 반영 후 최종 결과 출력
 
-        int n;
+        int n = 0;  // catch 볼록에서 if (q.handleInvalidInput(sc)) break 후 n이 카운트 되어있는 문제 발생
 
         Q1 q = new Q1();
 
@@ -34,11 +35,14 @@ public class Q1 {
         while (true) {
             try {
                 n = sc.nextInt();
+                sc.nextLine();
 
                 if (n >= 1) {
                     break;
                 } else {
-                    q.InputOutput(sc);
+                    if (q.handleInvalidInput(sc)) {
+                        break;
+                    }
 //                    System.out.println("n은 1 이상의 정수여야 합니다.\n" + "재입력하시겠습니까? (No 입력 시 종료)");
 //
 //                    sc.nextLine();
@@ -52,7 +56,10 @@ public class Q1 {
 //                    }
                 }
             } catch (InputMismatchException e) {
-                q.InputOutput(sc);
+                if (q.handleInvalidInput(sc)) {
+                    break;
+                }
+
 //                System.out.println("n은 1 이상의 정수여야 합니다.\n" + "재입력하시겠습니까? (No 입력 시 종료)");
 //
 //                sc.nextLine();  // 버퍼 비우기 안 하면, 무한 루프
