@@ -8,6 +8,15 @@ public class Q5 {
         int a = sc.nextInt();
         int b = sc.nextInt();
         int c = sc.nextInt();
-        // TODO: a, b, c 중 최대값 또는 같은 값 여부 출력
+
+        if (a == b || b == c || c == a) {
+            System.out.print("같은 수 존재");
+        } else if (a > b && a > c) {
+            System.out.print(a);
+        } else if (b > a && b > c) {
+            System.out.print(b);
+        } else {
+            System.out.print(c);
+        }
     }
 }
