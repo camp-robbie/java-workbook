@@ -26,23 +26,22 @@ public class Q3 {
                 sum += i;
                 i += 3;
             } while (i <= n);
+
+            System.out.println(sum);
         }
 
-        System.out.println(sum);
 
-        /*
         // 반복문 내 if 문 활용
-        int sum = 0;
-        int i = 1;
-        do {
-            if (i % 3 == 0) {
-                sum += i;
-            }
-            i++;
-        } while (i <= n);
-
-        System.out.println(sum);
-        */
+//        int sum = 0;
+//        int i = 1;
+//        do {
+//            if (i % 3 == 0) {
+//                sum += i;
+//            }
+//            i++;
+//        } while (i <= n);
+//
+//        System.out.println(sum);
 
         sc.close();
     }
