@@ -29,7 +29,7 @@ public class Q2 {
                 }
             }
 
-            // 예시 출력과 비슷하게 출력
+            // 출력 예시와 비슷하게 출력
             System.out.print("가장 큰 수는 = " + max + " ");
             System.out.print("가장 작은 수는 = " + min);
         } catch (InputMismatchException e) { // 숫자 이외의 입력을 할 시
