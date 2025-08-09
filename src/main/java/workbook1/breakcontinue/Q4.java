@@ -13,5 +13,22 @@ public class Q4 {
             }
             System.out.println();
         }
+
+        /*
+        // solution
+        for (int i = 2; i <= 9; i++ ) {
+            for (int j = 2; j <= 10; j++ ) {
+                int result = i * j;
+
+                // 곱셈 결과가 30 이상이면 건너뛰기
+                if (result >= 30) {
+                    continue;
+                }
+
+                // 30 미만인 경우만 출력
+                System.out.println(result + "*" + j + "=" + result + " ");
+            }
+        }
+        */
     }
 }
