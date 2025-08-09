@@ -13,6 +13,11 @@ public class Q6 {
         for (int i = 1; i <= n; i++) {
             int num = i;
             int sum = 0;
+            /*
+            // solution
+            // 변수명을 직관적으로 짓기!
+            int digitSum = 0;   // 현재 수의 자릿수 합
+            */
 
             while (num > 0) {
                 sum += num % 10;

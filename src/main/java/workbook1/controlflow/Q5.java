@@ -21,5 +21,9 @@ public class Q5 {
 
         sc.close();
 
+        /*
+        // solution
+        // 이 과정을 "디지털 루트(Digital Root)" 또는 "반복 디지털 합"이라고 부르기도 한다.
+        */
     }
 }
