@@ -29,8 +29,10 @@ public class Q2 {
                 break;
             case 7:
                 System.out.println("일");
+                break;
             default:
                 System.out.println("잘못된 입력입니다. 1부터 7까지만 입력 가능합니다.");
+                break;
         }
 
         sc.close();;
