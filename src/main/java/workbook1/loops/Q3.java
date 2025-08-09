@@ -30,6 +30,17 @@ public class Q3 {
             System.out.println(sum);
         }
 
+        /*
+        // solution
+        do {
+            if (i <= n) {
+                sum += i;
+            }
+            i += 3;
+        } while (i <= n);
+
+        System.out.println(sum);
+        */
 
         // 반복문 내 if 문 활용
 //        int sum = 0;
