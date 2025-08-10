@@ -1,6 +1,5 @@
 package main.java.workbook2.array;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Q4 {
