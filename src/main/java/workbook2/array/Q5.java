@@ -10,7 +10,6 @@ public class Q5 {
 
         // TODO: arr에 값 저장 후 버블 정렬 구현, 정렬된 배열 출력
 
-
         for(int i = 0; i < arr.length; i++) {   // i는 0이고, i가 arr.length보다 작을동안 1씩 증가시키며 반복 수행
             arr[i] = sc.nextInt();              // arr[i] 입력받은 값을 저장함
         }
