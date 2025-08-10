@@ -8,6 +8,7 @@ public class Q4 {
         Scanner sc = new Scanner(System.in);
 
         try{
+            // 각 배열의 크기 선언
             int[][] A = new int[3][3];
             int[][] B = new int[3][3];
             int[][] C = new int[3][3];
@@ -38,10 +39,10 @@ public class Q4 {
                 System.out.println(); // 줄 변경
             }
 
-        } catch(InputMismatchException e){
-            System.out.println("숫자만 입력해주세요!");
-        } finally {
-            sc.close();
+        } catch(InputMismatchException e){ // 숫자 이외의 값을 입력할 시
+            System.out.println("숫자만 입력해주세요!"); // 예외 처리
+        } finally { // 항상 실행
+            sc.close(); // 자원 누수 방지
         }
     }
 }
