@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Q4 {
     // 세 정수의 평균을 반환하는 average 메서드 작성
     public static double average(int a, int b, int c){
-        return (a+b+c)/3;
+        return (a+b+c)/3.0;
     }
 
     public static void main(String[] args) {
