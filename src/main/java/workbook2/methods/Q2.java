@@ -8,5 +8,10 @@ public class Q2 {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
         // TODO: stringLength 호출 후 결과 출력
+        System.out.println(stringLength(str));
+    }
+
+    public static int stringLength(String str){
+        return str.length();
     }
 }
