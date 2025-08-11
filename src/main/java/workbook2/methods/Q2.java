@@ -16,5 +16,7 @@ public class Q2 {
         int stl = stringLength(str); // 메서드 호출
 
         System.out.println(stl); // 결과 출력
+
+        sc.close();
     }
 }

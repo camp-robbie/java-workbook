@@ -19,5 +19,7 @@ public class Q1 {
 
         // 결과 출력
         System.out.println(result);
+
+        sc.close();
     }
 }

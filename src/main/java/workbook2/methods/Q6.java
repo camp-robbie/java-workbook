@@ -10,3 +10,4 @@ public class Q6 {
         // TODO: factorial 호출 후 결과 출력
     }
 }
+//진희님거 보면서 해보겠습니당
