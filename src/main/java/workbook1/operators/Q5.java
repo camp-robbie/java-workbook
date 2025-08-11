@@ -18,7 +18,7 @@ public class Q5 {
 
         // a += b * c 연산값을 저장하는 변수를 만든다.
         int sum = a += b * c;  // sum = a + (b * c)
-        System.out.println("sum = " + sum);
+        System.out.println("a:" + a + " b:" + b + " c:" + c);
 
     }
 }
