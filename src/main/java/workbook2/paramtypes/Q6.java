@@ -8,8 +8,8 @@ public class Q6 {
         return s+"!";
     }
 
-    private static StringBuilder addExclamation(StringBuilder sb){
-        return sb.append("!");
+    private static void addExclamation(StringBuilder sb){
+        sb.append("!");
     }
 
     public static void main(String[] args) {
