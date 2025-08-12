@@ -6,9 +6,7 @@ public class Q3 {
     // TODO: copyArray 메서드 작성 (int[] 배열을 받아 깊은 복사 후 반환)
     public static int[] copyArray(int[] original){
         int[] copy = new int[original.length];
-        for(int i = 0; i<original.length; i++){
-            copy[i] =  original[i];
-        }
+        for(int i = 0; i<original.length; i++) copy[i] = original[i];
         return copy;
     }
 
