@@ -3,19 +3,31 @@ package main.java.workbook2.classdesign;
 import java.util.Scanner;
 
 class Circle {
-    double r;
-    // TODO: 생성자 작성
+
+    private final double r;
+
+    public Circle(double r) {
+        this.r = r;
+    }
+    // 원의 둘레 = 지름*PI
+    // 입력된 값 = 반지름
+    // 2를 곱해주어야 함.
     double getCircumference() {
-        // TODO: 둘레 반환
-        return 0;
+        return r*2*Math.PI;
     }
 }
 
 public class Q2 {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
+
         double radius = sc.nextDouble();
-        // Circle c = new Circle(radius); // TODO: 생성자 작성 후 주석 해제
-        // TODO: c.getCircumference() 출력
+
+        // 객체 생성
+        Circle c = new Circle(radius);
+
+        // 출력
+        System.out.println(c.getCircumference());
     }
 }
