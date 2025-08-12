@@ -1,7 +1,5 @@
 package main.java.workbook2.classdesign;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Scanner;
 
 class Time {
