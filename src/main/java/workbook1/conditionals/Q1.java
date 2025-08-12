@@ -12,6 +12,10 @@ public class Q1 {
         System.out.print("Number: ");
         int num = sc.nextInt();
 
+        // 조건문 작성
+        // 0 이상 : positive number
+        // 0 이하 : negative number
+        // 0 = 0
         if (num > 0) {
             System.out.println("Positive Number");
         } else if (num < 0) {
