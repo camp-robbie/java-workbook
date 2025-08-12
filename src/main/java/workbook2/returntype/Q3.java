@@ -28,7 +28,7 @@ public class Q3 {
         for (int i = 0; i < n; i++) {
             original[i] = sc.nextInt();
         }
-        // TODO: copy 배열을 출력
+        //copy 배열을 출력
         System.out.println("복사된 배열값 출력");
         for (int i : copy) {
             System.out.print( i + " ");
