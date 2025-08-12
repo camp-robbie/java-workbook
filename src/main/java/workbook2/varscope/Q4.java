@@ -1,5 +1,6 @@
 package main.java.workbook2.varscope;
 
+// 이미 정답 아닌가요...?
 public class Q4 {
     static {
         System.out.println("static block");
