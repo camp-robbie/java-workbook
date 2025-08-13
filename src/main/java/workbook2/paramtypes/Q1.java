@@ -11,7 +11,7 @@ public class Q1 {
     x를 return한다.
      */
     public static int primitiveParam(int x) {
-            x += 10;
+        x += 10;
         return x;
     }
 
@@ -23,12 +23,13 @@ public class Q1 {
      */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        try{
+        try {
             int x = sc.nextInt();
             int result = primitiveParam(x); // TODO: primitiveParam 메서드 작성 후 주석 해제
             // TODO: 원래 x와 메서드 반환 값 출력
-            System.out.println("x = " + result);
-        } catch (InputMismatchException e){ // 숫자 이외의 입력을 받을 시
+            System.out.print("(x의 값:" + x + ") ");
+            System.out.println("(메서드 반환 값:" + result + ")");
+        } catch (InputMismatchException e) { // 숫자 이외의 입력을 받을 시
             System.out.println("숫자만을 입력해주세요."); // 예외 처리
         } finally {
             sc.close(); // 자원 누수 방지
