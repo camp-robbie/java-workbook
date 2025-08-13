@@ -13,5 +13,16 @@ public class Q4 {
 
     public static void main(String[] args) {
         Q4 d = new Q4();
+        Q4 d2 = new Q4();
     }
+
+    /*
+    출력결과
+    static block
+    instance block
+    constructor
+    instance block
+    constructor
+                    static block이 한번만 실행됨
+ */
 }
