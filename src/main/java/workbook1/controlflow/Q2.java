@@ -6,6 +6,14 @@ public class Q2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int count = sc.nextInt();
-        // TODO: count개의 정수를 입력받아 양수 개수와 음수 합을 계산 후 출력
+        int pos = 0;
+        int neg = 0;
+
+        for (int i = 1; i <= count; i++) {
+            int num = sc.nextInt();
+            if (num > 0) pos ++;
+            else neg += num;
+        }
+        System.out.printf(pos + " " + neg);
     }
 }
