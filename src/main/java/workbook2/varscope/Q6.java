@@ -11,9 +11,13 @@ class Bank {
     }
     void deposit(int amount) {
         // TODO: balance와 totalBalance 증가
+        balance += amount;          // balance = balance + amount
+        totalBalance += amount;     // totalBalance = totalBalance + amount
     }
     void withdraw(int amount) {
         // TODO: balance와 totalBalance 감소
+        balance -= amount;          // balance = balance - amount
+        totalBalance -= amount;     // totalBalance = totalBalance - amount
     }
 }
 
@@ -29,5 +33,6 @@ public class Q6 {
         int amt1 = sc.nextInt();
         // 첫 번째 명령 처리
         // 두 번째 명령 처리 후 Bank.totalBalance 출력
+
     }
 }
