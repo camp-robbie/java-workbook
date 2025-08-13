@@ -6,7 +6,14 @@ public class Q1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        // TODO: while 문을 이용하여 1부터 n까지의 합 출력
+        int i = 1;
+        long total = 0;
+
+        while (i <= n) {
+            total += i;
+            i++;
+        }
+        System.out.print(total);
     }
 }
 
