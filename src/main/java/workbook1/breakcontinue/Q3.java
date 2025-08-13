@@ -5,6 +5,14 @@ import java.util.Scanner;
 public class Q3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        // TODO: 음수가 나오면 break, 양수 평균 출력
+        int sum = 0;
+        int count = 0;
+
+        while (sc.hasNextInt()) {
+            int x = sc.nextInt();
+            if (x < 0) break;
+            if (x > 0) {count++; sum += x;}
+            }
+            System.out.println((float) sum / count);
+        }
     }
-}
