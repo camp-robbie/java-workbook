@@ -5,12 +5,18 @@ import java.util.Scanner;
 class Calculator {
     static String history = "";
     int add(int a, int b) {
-        // TODO: 연산 결과 저장 후 반환
-        return 0;
+        history += a + "+" + b +"  ";
+        return a+b;
     }
     int sub(int a, int b) {
-        // TODO: 연산 결과 저장 후 반환
-        return 0;
+        if(a>=b){
+            history += a + "-" + b +"  ";
+            return a-b;
+        }
+        else{
+            history += b + "-" + b +"  ";
+            return b-a;
+        }
     }
 }
 
@@ -29,6 +35,13 @@ public class Q5 {
                 results[i] = calc.sub(x, y);
             }
         }
-        // TODO: results 배열과 Calculator.history 출력
+// TODO: results 배열과 Calculator.history 출력
+
+        for (int result : results) {
+            System.out.print(result+ " ");
+        }
+        System.out.println();
+        System.out.println(Calculator.history);
+
     }
 }
