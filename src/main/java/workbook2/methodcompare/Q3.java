@@ -5,11 +5,11 @@ import java.util.Scanner;
 class Converter {
     static double toCelsius(double f) {
         // TODO: 섭씨로 변환
-        return 0;
+        return (f -32)*5/9;
     }
     double toFahrenheit(double c) {
         // TODO: 화씨로 변환
-        return 0;
+        return c*9/5+32;
     }
 }
 
@@ -22,5 +22,6 @@ public class Q3 {
         Converter conv = new Converter();
         double fRes = conv.toFahrenheit(c);
         // TODO: cRes와 fRes 출력
+        System.out.println(cRes + " " + fRes);
     }
 }

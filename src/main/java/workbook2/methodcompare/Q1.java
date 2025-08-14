@@ -5,11 +5,11 @@ import java.util.Scanner;
 class Calculator {
     static int add(int a, int b) {
         // TODO: 덧셈 결과 반환
-        return 0;
+        return a+b;
     }
     int multiply(int a, int b) {
         // TODO: 곱셈 결과 반환
-        return 0;
+        return a*b;
     }
 }
 
@@ -22,5 +22,6 @@ public class Q1 {
         Calculator calc = new Calculator();
         int prod = calc.multiply(x, y);
         // TODO: sum과 prod 출력
+        System.out.println(sum + " " + prod);
     }
 }

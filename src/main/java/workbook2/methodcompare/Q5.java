@@ -7,10 +7,16 @@ class Statistics {
     static int sum = 0;
     void addNumber(int n) {
         // TODO: count와 sum 갱신
+        count++;
+        sum += n;
     }
     static double average() {
         // TODO: 평균 반환
-        return 0;
+        if (count == 0) {
+            return 0;
+        } else {
+            return (double) sum / count;
+        }
     }
 }
 
@@ -23,5 +29,6 @@ public class Q5 {
             stat.addNumber(sc.nextInt());
         }
         // TODO: Statistics.average() 출력
+        System.out.println(Statistics.average());
     }
 }
