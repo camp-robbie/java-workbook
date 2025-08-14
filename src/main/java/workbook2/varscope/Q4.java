@@ -7,6 +7,7 @@ public class Q4 {
     {
         System.out.println("instance block");
     }
+
     Q4() {
         System.out.println("constructor");
     }
