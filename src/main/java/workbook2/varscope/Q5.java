@@ -4,13 +4,19 @@ import java.util.Scanner;
 
 class Calculator {
     static String history = "";
+
     int add(int a, int b) {
         // TODO: 연산 결과 저장 후 반환
-        return 0;
+        int result = a + b;
+        history += a + " + " + b + ", ";
+        return result;
     }
+
     int sub(int a, int b) {
         // TODO: 연산 결과 저장 후 반환
-        return 0;
+        int result = a - b;
+        history += a + " - " + b + ", ";
+        return result;
     }
 }
 
@@ -30,5 +36,14 @@ public class Q5 {
             }
         }
         // TODO: results 배열과 Calculator.history 출력
+
+        for (int r : results) {
+            System.out.print(r + " ");
+        }
+        System.out.println();
+
+        // 마지막 콤마 제거
+        System.out.println(Calculator.history.substring(0, Calculator.history.length() - 2));
     }
 }
+
