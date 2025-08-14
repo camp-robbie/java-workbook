@@ -5,15 +5,20 @@ import java.util.Scanner;
 class Bank {
     static int totalBalance = 0;
     int balance;
+
     Bank(int balance) {
         this.balance = balance;
         totalBalance += balance;
     }
     void deposit(int amount) {
         // TODO: balance와 totalBalance 증가
+        balance += amount;
+        totalBalance += amount;
     }
     void withdraw(int amount) {
         // TODO: balance와 totalBalance 감소
+        balance -= amount;
+        totalBalance -= amount;
     }
 }
 
@@ -29,5 +34,26 @@ public class Q6 {
         int amt1 = sc.nextInt();
         // 첫 번째 명령 처리
         // 두 번째 명령 처리 후 Bank.totalBalance 출력
+        if (op1.equals("deposit")) {
+            if (id1 == 1) acc1.deposit(amt1);
+            else acc2.deposit(amt1);
+        } else {
+            if (id1 == 1) acc1.withdraw(amt1);
+            else acc2.withdraw(amt1);
+        }
+
+        String op2 =sc.next();
+        int id2 = sc.nextInt();
+        int amt2 = sc.nextInt();
+        if (op2.equals("deposit")) {
+            if (id2 == 1) acc1.deposit(amt2);
+            else acc2.deposit(amt2);
+        } else {
+            if (id2 == 1) acc1.withdraw(amt2);
+            else acc2.withdraw(amt2);
+        }
+
+        System.out.println(Bank.totalBalance);
     }
 }
+
