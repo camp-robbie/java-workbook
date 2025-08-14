@@ -7,6 +7,8 @@ public class Q3 {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int[] arr = new int[n];
-        // TODO: arr에 n개의 정수 저장 후 역순으로 출력
+
+        for (int i = 0; i < n; i++) arr[i] = sc.nextInt();
+        for (int i = arr.length - 1; i >= 0; i--) System.out.print(arr[i] + " ");
     }
 }
