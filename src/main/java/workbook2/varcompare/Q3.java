@@ -8,6 +8,9 @@ class Student {
     String name;
     Student(String name) {
         // TODO: studentCount 증가 후 id에 할당
+        this.name = name;
+        studentCount++;
+        this.id = studentCount;
     }
 }
 
