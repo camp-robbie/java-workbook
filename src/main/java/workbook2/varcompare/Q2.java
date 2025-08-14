@@ -7,16 +7,18 @@ class Car {
     String name;
     Car(String name) {
         this.name = name;
-        // TODO: totalCars 증가
+        totalCars++; // TODO: totalCars 증가
     }
 }
 
 public class Q2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("자동차 입력");
         String n1 = sc.next();
         String n2 = sc.next();
         String n3 = sc.next();
+        //Car 객체 생성
         Car c1 = new Car(n1);
         Car c2 = new Car(n2);
         Car c3 = new Car(n3);
