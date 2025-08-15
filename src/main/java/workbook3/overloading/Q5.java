@@ -1,7 +1,5 @@
 package main.java.workbook3.overloading;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Scanner;
 
 public class Q5 {
