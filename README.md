@@ -185,14 +185,18 @@ git pull upstream solutions
 
 ```bash
 # 문법: git fetch <원격> <가져올브랜치>:<갱신할로컬브랜치>
+# 문법: git fetch [가져올 원격 저장소] [가져올 브랜치]:[저장할 로컬 브랜치]
 
 # master 최신 반영
+# 설명: upstream의 master 브랜치 내용을 가져와서 내 로컬 master 브랜치에 덮어쓴다.
 git fetch upstream master:master
 
 # lecture 최신 반영
+# 설명: # upstream의 lecture 브랜치 내용을 가져와서 내 로컬 lecture 브랜치에 덮어쓴다.
 git fetch upstream lecture:lecture
 
 # solutions 최신 반영
+# 설명: # upstream의 solutions 브랜치 내용을 가져와서 내 로컬 solutions 브랜치에 덮어쓴다.
 git fetch upstream solutions:solutions
 ```
 
