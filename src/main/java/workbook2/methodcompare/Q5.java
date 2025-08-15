@@ -1,7 +1,5 @@
 package main.java.workbook2.methodcompare;
 
-import jdk.dynalink.beans.StaticClass;
-
 import java.util.Scanner;
 
 class Statistics {
