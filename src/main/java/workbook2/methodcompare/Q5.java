@@ -1,5 +1,7 @@
 package main.java.workbook2.methodcompare;
 
+import jdk.dynalink.beans.StaticClass;
+
 import java.util.Scanner;
 
 class Statistics {
@@ -7,10 +9,12 @@ class Statistics {
     static int sum = 0;
     void addNumber(int n) {
         // TODO: count와 sum 갱신
+        count++;
+        sum += n;
     }
     static double average() {
         // TODO: 평균 반환
-        return 0;
+        return (double)sum/count;
     }
 }
 
@@ -23,5 +27,6 @@ public class Q5 {
             stat.addNumber(sc.nextInt());
         }
         // TODO: Statistics.average() 출력
+        System.out.println(Statistics.average());
     }
 }
