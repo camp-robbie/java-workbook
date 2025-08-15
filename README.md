@@ -19,33 +19,34 @@
 3. [1) 포크 & 클론](#1-포크--클론)
 4. [2) upstream 연결 & 로컬 브랜치 생성](#2-upstream-연결--로컬-브랜치-생성)
 5. [3) 원본과 동기화 (안전: rebase)](#3-원본과-동기화-안전-rebase)
-6. [4) (옵션) 로컬을 원본과 동일하게 맞추기](#4-옵션-로컬을-원본과-동일하게-맞추기)
-7. [5) 권장 작업 흐름](#5-권장-작업-흐름)
-8. [6) IntelliJ 팁](#6-intellij-팁)
-9. [7) 자주 하는 실수 & 해결](#7-자주-하는-실수--해결)
-10. [8) 터미널 치트시트 (복붙용)](#8-터미널-치트시트-복붙용)
-11. [부록 A. Git 핵심 개념 초간단 정리](#부록-a-git-핵심-개념-초간단-정리)
-12. [부록 B. 포크 후 원본 신규 브랜치 따라잡기](#부록-b-포크-후-원본-신규-브랜치-따라잡기)
+6. [3-1) 기존 브랜치를 Upstream 최신으로 만드는 3가지 방법](#3-1-기존-브랜치를-upstream-최신으로-만드는-3가지-방법)
+7. [4) (옵션) 로컬을 원본과 동일하게 맞추기](#4-옵션-로컬을-원본과-동일하게-맞추기)
+8. [5) 권장 작업 흐름](#5-권장-작업-흐름)
+9. [6) IntelliJ 팁](#6-intellij-팁)
+10. [7) 자주 하는 실수 & 해결](#7-자주-하는-실수--해결)
+11. [8) 터미널 치트시트 (복붙용)](#8-터미널-치트시트-복붙용)
+12. [부록 A. Git 핵심 개념 초간단 정리](#부록-a-git-핵심-개념-초간단-정리)
+13. [부록 B. 포크 후 원본 신규 브랜치 따라잡기](#부록-b-포크-후-원본-신규-브랜치-따라잡기)
 
 ---
 
 ## 빠른 시작(요약)
 
 ```bash
-# 최초 1회: upstream 추가 + 브랜치 만들기
+# (최초 1회) upstream 추가 + 브랜치 만들기
 git remote add upstream https://github.com/camp-robbie/java-workbook.git
 git fetch upstream
 git checkout -b master    upstream/master
 git checkout -b lecture   upstream/lecture
 git checkout -b solutions upstream/solutions
 
-# 이후 매번: 원본 변경사항 rebase로 반영
+# (매번) 원본 변경사항을 rebase로 반영
 git checkout master    && git pull --rebase upstream master
 git checkout lecture   && git pull --rebase upstream lecture
 git checkout solutions && git pull --rebase upstream solutions
 ```
 
-> **팁**: 저장소에 `main`이 아닌 `master`를 사용합니다. (환경에 따라 `main`을 쓰는 프로젝트도 있으니 주의)
+> **팁**: 이 저장소는 기본 브랜치로 `master`를 사용합니다. (프로젝트에 따라 `main`을 쓰는 곳도 있으니 주의)
 
 ---
 
@@ -123,21 +124,98 @@ git pull --rebase upstream solutions
 git push origin solutions   # 선택
 ```
 
-> **IntelliJ**: *Git ▸ Pull…* 에서 `--rebase` 옵션 체크 가능
+> **왜 rebase?** 히스토리가 깔끔해지고(불필요한 merge 커밋 감소), 충돌 해결도 한 번에 직관적으로 하기 좋습니다. 팀 정책에 따라 merge를 사용하기도 하니 아래 3가지 업데이트 방법도 함께 참고하세요.
 
 ---
 
-## 4) (옵션) 로컬을 원본과 동일하게 맞추기
+## 3-1) 기존 브랜치를 Upstream 최신으로 만드는 3가지 방법
 
-> **주의:** 로컬 수정이 덮어씌워질 수 있습니다. 대상 브랜치를 **체크아웃하지 않은 상태**에서 실행하세요.
+> **공통 주의:** 병합/갱신하려는 **로컬 브랜치와 Upstream 브랜치가 정확히 매칭**되는지 먼저 확인하세요.  
+> 확인: `git branch -vv`, `git remote -v`
+
+### 1) Fetch + Merge
+
+- `upstream/브랜치`의 최신 내용을 **가져온 뒤**, 현재 체크아웃한 **로컬 브랜치에 merge** 합니다.
+- 팀에서 **명시적 merge 커밋**을 선호하거나, 히스토리를 보존하고 싶을 때 사용합니다.
 
 ```bash
-# 원본 브랜치 내용을 로컬 동일 브랜치로 덮어쓰기(fetch+update-ref)
+git fetch upstream
+
+git checkout master
+git merge upstream/master
+
+git checkout lecture
+git merge upstream/lecture
+
+git checkout solutions
+git merge upstream/solutions
+```
+
+> **주의!** merge 하기 전에 *현재 체크아웃된 로컬 브랜치*가 병합 대상과 같은지 꼭 확인하세요. (예: `master` ↔ `upstream/master`)
+
+---
+
+### 2) Pull (가져오면서 병합)
+
+- 체크아웃한 로컬 브랜치에 대해 **가져오기+병합**을 한 번에 수행합니다.
+
+```bash
+# master 예시
+git checkout master
+git pull upstream master
+
+# lecture 예시
+git checkout lecture
+git pull upstream lecture
+
+# solutions 예시
+git checkout solutions
+git pull upstream solutions
+```
+
+> `git pull = git fetch + git merge` (기본 설정 기준)  
+> rebase로 가져오려면 `git pull --rebase upstream master` 처럼 `--rebase` 옵션을 붙이세요.
+
+---
+
+### 3) Fetch(Refspec) — 로컬 브랜치 체크아웃 없이 갱신
+
+- **체크아웃하지 않은 상태**에서 `upstream/<branch>`를 **로컬 `<branch>` 참조로 직접 갱신**합니다.
+- 기본적으로 **fast-forward만 허용**합니다(로컬에 앞선 커밋이 있으면 실패). 안전하게 **동기화만** 하고 싶을 때 유용합니다.
+
+```bash
+# 문법: git fetch <원격> <가져올브랜치>:<갱신할로컬브랜치>
+# 문법: git fetch [가져올 원격 저장소] [가져올 브랜치]:[저장할 로컬 브랜치]
+
+# master 최신 반영
+# 설명: upstream의 master 브랜치 내용을 가져와서 내 로컬 master 브랜치에 덮어쓴다.
+git fetch upstream master:master
+
+# lecture 최신 반영
+# 설명: # upstream의 lecture 브랜치 내용을 가져와서 내 로컬 lecture 브랜치에 덮어쓴다.
+git fetch upstream lecture:lecture
+
+# solutions 최신 반영
+# 설명: # upstream의 solutions 브랜치 내용을 가져와서 내 로컬 solutions 브랜치에 덮어쓴다.
+git fetch upstream solutions:solutions
+```
+
+> **팁:** 강제 갱신하려면 `+`를 붙입니다(위험). 예: `git fetch upstream +master:master`  
+> 다만 로컬 커밋을 잃을 수 있으니 정말 필요한 경우에만 사용하세요.
+
+---
+
+## 4) (옵션) 로컬을 원본과 동일하게 '완전 일치' 시키기
+
+> **위험:** 로컬 수정이 덮어씌워질 수 있습니다. 대상 브랜치를 **체크아웃하지 않은 상태**에서 실행하세요.
+
+```bash
+# 안전한 동기화(FF만 허용): 체크아웃하지 않은 상태에서
 git fetch upstream solutions:solutions
 git fetch upstream lecture:lecture
 ```
 
-보다 강력하게 **완전 일치**시키려면(위험):
+보다 강력하게 **완전 일치**시키려면(이력 재작성):
 
 ```bash
 git checkout master
@@ -150,7 +228,7 @@ git push --force-with-lease origin master
 
 ## 5) 권장 작업 흐름
 
-1) **동기화**: 위 3단계(rebase)를 먼저 수행  
+1) **동기화**: 위 [3) rebase] 또는 [3-1) 3가지 방법] 중 팀 규칙에 맞는 방식으로 최신화  
 2) **작업 브랜치 생성**:
 
 ```bash
@@ -217,14 +295,26 @@ git checkout -b master    upstream/master
 git checkout -b lecture   upstream/lecture
 git checkout -b solutions upstream/solutions
 
-# 이후 최신 반영 (안전: rebase)
+# 이후 최신 반영 (선호: rebase)
 git checkout master    && git pull --rebase upstream master
 git checkout lecture   && git pull --rebase upstream lecture
 git checkout solutions && git pull --rebase upstream solutions
 
-# (옵션) 로컬을 원본으로 '그대로' 맞추기 (체크아웃 X)
-git fetch upstream solutions:solutions
+# (대안) 3가지 업데이트 방법
+# 1) Fetch + Merge
+git fetch upstream && git checkout master && git merge upstream/master
+git checkout lecture  && git merge upstream/lecture
+git checkout solutions && git merge upstream/solutions
+
+# 2) Pull
+git checkout master    && git pull upstream master
+git checkout lecture   && git pull upstream lecture
+git checkout solutions && git pull upstream solutions
+
+# 3) Fetch(Refspec) — 체크아웃 없이
+git fetch upstream master:master
 git fetch upstream lecture:lecture
+git fetch upstream solutions:solutions
 ```
 
 ---
@@ -235,7 +325,7 @@ git fetch upstream lecture:lecture
 |---|---|---|---|
 | `commit` | 로컬 변경을 기록 | 파일을 수정/저장했을 때 | `git commit -m "메시지"` |
 | `push` | 로컬 커밋을 깃허브에 업로드 | GitHub에 반영할 때 | `git push origin master` |
-| `pull` | GitHub 변경을 가져오고 **합침** | 다른 사람 변경 반영할 때 | `git pull origin master` |
+| `pull` | GitHub 변경을 가져오고 **합침** | 다른 사람 변경 반영할 때 | `git pull upstream master` |
 | `fetch` | GitHub 변경을 **가져오기만** 함 | 합치기 전 확인할 때 | `git fetch upstream` |
 
 - 쉬운 비유
@@ -272,4 +362,3 @@ git push origin solutions
 git checkout lecture
 git checkout solutions
 ```
-
