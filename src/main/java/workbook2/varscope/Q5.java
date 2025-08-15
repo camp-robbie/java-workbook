@@ -6,11 +6,13 @@ class Calculator {
     static String history = "";
     int add(int a, int b) {
         // TODO: 연산 결과 저장 후 반환
-        return 0;
+        history = history + a + " + " + b + ", ";
+        return a + b;
     }
     int sub(int a, int b) {
         // TODO: 연산 결과 저장 후 반환
-        return 0;
+        history = history + a + " - " + b + ", ";
+        return a - b;
     }
 }
 
@@ -30,5 +32,14 @@ public class Q5 {
             }
         }
         // TODO: results 배열과 Calculator.history 출력
+        for (int result : results) {            // 향상된 for문
+            System.out.print(result + " ");     // results 배열 출력
+        }
+
+        System.out.println();   // 띄어쓰기 추가
+
+        System.out.println(Calculator.history); // Calculator.history 출력
+
+        // 마지막 , 제거는 어떻게 할까?
     }
 }
