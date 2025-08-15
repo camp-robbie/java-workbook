@@ -6,13 +6,19 @@ class Car {
     String model;
     int price;
     Car() {
-        // TODO
+        // TODO 매개변수가 없는 생성자
+        this.model = "Unknown";
+        this.price = 0;
     }
     Car(String model, int price) {
-        // TODO
+        // TODO모델명과 가격을 매개변수로 받는 생성자
+        this.model=model;
+        this.price=price;
     }
     Car(int price) {
-        // TODO
+        // TODO가격만 받는 생성자(모델명은 “Unknown”으로)
+        this.price=price;
+        this.model="Unknown";
     }
 }
 
