@@ -1,4 +1,4 @@
-## README
+# README
 
 # java-workbook 사용 가이드 (Fork → Clone → Upstream 동기화 → IntelliJ 팁)
 
@@ -22,6 +22,9 @@
 6. [3-1) 기존 브랜치를 Upstream 최신으로 만드는 3가지 방법](#3-1-기존-브랜치를-upstream-최신으로-만드는-3가지-방법)
 7. [4) (옵션) 로컬을 원본과 동일하게 맞추기](#4-옵션-로컬을-원본과-동일하게-맞추기)
 8. [5) 권장 작업 흐름](#5-권장-작업-흐름)
+  - [5-1) 브랜치 네이밍 규칙 & 생성 (3단계)](#5-1-브랜치-네이밍-규칙--생성-3단계)
+  - [5-2) 문제 풀기 & 커밋 가이드 (4단계)](#5-2-문제-풀기--커밋-가이드-4단계)
+  - [5-3) 제출(푸시 & PR) 방법](#5-3-제출푸시--pr-방법)
 9. [6) IntelliJ 팁](#6-intellij-팁)
 10. [7) 자주 하는 실수 & 해결](#7-자주-하는-실수--해결)
 11. [8) 터미널 치트시트 (복붙용)](#8-터미널-치트시트-복붙용)
@@ -72,13 +75,13 @@ git config --global user.email "you@example.com"
 
 1. GitHub에서 원본 저장소 `camp-robbie/java-workbook`을 **Fork**합니다. (내 계정 아래 복사본 생성)
 2. 로컬로 클론 (둘 중 택1)
-   - **IntelliJ**: *Get from VCS* → 포크 URL → **Clone**
-   - **터미널**:
+  - **IntelliJ**: *Get from VCS* → 포크 URL → **Clone**
+  - **터미널**:
 
-     ```bash
-     git clone https://github.com/<your-username>/java-workbook.git
-     cd java-workbook
-     ```
+    ```bash
+    git clone https://github.com/<your-username>/java-workbook.git
+    cd java-workbook
+    ```
 
 3. (Git 없이 파일만 받을 경우) 저장소 페이지 → **Code ▸ Download ZIP**
 
@@ -185,18 +188,15 @@ git pull upstream solutions
 
 ```bash
 # 문법: git fetch <원격> <가져올브랜치>:<갱신할로컬브랜치>
-# 문법: git fetch [가져올 원격 저장소] [가져올 브랜치]:[저장할 로컬 브랜치]
 
 # master 최신 반영
-# 설명: upstream의 master 브랜치 내용을 가져와서 내 로컬 master 브랜치에 덮어쓴다.
+# 설명: upstream의 master 브랜치를 내 로컬 master 브랜치에 반영
 git fetch upstream master:master
 
 # lecture 최신 반영
-# 설명: # upstream의 lecture 브랜치 내용을 가져와서 내 로컬 lecture 브랜치에 덮어쓴다.
 git fetch upstream lecture:lecture
 
 # solutions 최신 반영
-# 설명: # upstream의 solutions 브랜치 내용을 가져와서 내 로컬 solutions 브랜치에 덮어쓴다.
 git fetch upstream solutions:solutions
 ```
 
@@ -228,23 +228,79 @@ git push --force-with-lease origin master
 
 ## 5) 권장 작업 흐름
 
-1) **동기화**: 위 [3) rebase] 또는 [3-1) 3가지 방법] 중 팀 규칙에 맞는 방식으로 최신화  
-2) **작업 브랜치 생성**:
+1) **동기화**: 위 [3) rebase] 또는 [3-1) 3가지 방법] 중 팀 규칙에 맞는 방식으로 최신화
+2) **작업 브랜치 생성**
+3) **문제 풀이 & 작은 단위 커밋**
+4) **푸시 & PR 생성**
+5) 작업 종료 후 `master`로 돌아와 다시 동기화
+
+### 5-1) 브랜치 네이밍 규칙 & 생성 (3단계)
+
+- **브랜치 범위**: **문제 항목 1개에 브랜치 1개**
+- **이름 규칙**: `feature/[이름]-[패키지명]-solutions`
+  - 예) “기본형과 형변환 이해” 항목 → 패키지명 `primitiveconversion` 가정  
+    → `feature/choi-wonbin-primitiveconversion-solutions`
+
+**IntelliJ GUI**
+
+- 좌하단 **Git** 탭 → *Local* 에서 `master` 우클릭 → **New Branch…**  
+  이름에 `feature/[이름]-[패키지명]-solutions` 입력 → 생성
+
+**터미널**
 
 ```bash
-git switch -c feat/풀이-001
+git checkout -b feature/[이름]-[패키지명]-solutions
+# 예시
+git checkout -b feature/choi-wonbin-primitiveconversion-solutions
 ```
 
-3) **커밋 & 푸시**:
+---
+
+### 5-2) 문제 풀기 & 커밋 가이드 (4단계)
+
+- **작업 단위**: **문제 1개당 커밋 1개**(작고 의미 있게)
+- **커밋 메시지 예시**
+  - `feat: [primitiveconversion] Q1 구현`
+  - `fix: [primitiveconversion] Q1 변수명 수정`
+
+**IntelliJ GUI**
+
+1) 좌측 상단 **Commit** 탭 → *Changes*에서 완료한 파일 선택
+2) 메시지 입력 → 아래 **Commit** 버튼 클릭
+3) 좌하단 **Git** 탭에서 내 커밋 이력이 보이면 성공
+
+**터미널**
 
 ```bash
-git add -A
-git commit -m "feat: 풀이 001 추가"
-git push -u origin feat/풀이-001
+git add <파일>
+git commit -m "feat: [primitiveconversion] Q1 구현"
 ```
 
-4) **(선택) PR 열기**: 내 포크(origin) → 원본(upstream)으로 Pull Request  
-5) 작업이 끝나면 `master`로 돌아와 다시 동기화
+---
+
+### 5-3) 제출(푸시 & PR) 방법
+
+- **PR 범위**: **문제 항목 1개에 PR 1개**
+
+**1) GitHub에 푸시**
+
+- **IntelliJ GUI**: 좌하단 **Git** 탭 → *Local*에서 작업 브랜치 우클릭 → **Push**  
+  → 내용 확인 후 **Push** 클릭 → *Remote*에 작업 브랜치 생성 확인 →  
+  GitHub 포크 저장소에서 해당 브랜치가 보이면 성공
+
+- **터미널**
+
+```bash
+git push -u origin feature/[이름]-[패키지명]-solutions
+# 예시
+git push -u origin feature/choi-wonbin-primitiveconversion-solutions
+```
+
+**2) PR 생성**
+
+- GitHub(내 포크)에서 방금 푸시한 브랜치로 이동 → **Compare & pull request**
+- 대상 저장소: **upstream** (`camp-robbie/java-workbook`), 대상 브랜치: 과제 지침에 따름
+- 제목/설명에 항목명, 주요 변경점, 테스트 방법 등을 적고 제출
 
 ---
 
@@ -277,7 +333,6 @@ git push -u origin feat/풀이-001
   → `git rebase --continue` (또는 `git merge --continue`).
 
 - **원격/브랜치 연결 상태 확인**
-
   ```bash
   git remote -v
   git branch -vv
@@ -315,6 +370,14 @@ git checkout solutions && git pull upstream solutions
 git fetch upstream master:master
 git fetch upstream lecture:lecture
 git fetch upstream solutions:solutions
+
+# 작업용 브랜치 생성(규칙)
+git checkout -b feature/[이름]-[패키지명]-solutions
+
+# 커밋 & 푸시
+git add -A
+git commit -m "feat: [패키지명] Q1 구현"
+git push -u origin feature/[이름]-[패키지명]-solutions
 ```
 
 ---
@@ -362,3 +425,7 @@ git push origin solutions
 git checkout lecture
 git checkout solutions
 ```
+
+--- 
+
+> 이 README는 **브랜치 네이밍 규칙(3단계)**, **문제 풀이 & 커밋 가이드(4단계)**, **제출(푸시 & PR)** 을 포함해 실전 흐름에 맞춰 구성되었습니다.
