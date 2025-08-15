@@ -6,9 +6,16 @@ class RandomInit {
     int[] arr = new int[5];
     {
         // TODO: arr 배열을 난수로 채움
+        Random rand = new Random();
+        for(int i = 0; i<5; i++){
+            arr[i] = rand.nextInt(100)+ 1;              //1~100까지 랜덤 생성
+        }
     }
     void printArray() {
         // TODO: arr 요소 출력
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
     }
 }
 
