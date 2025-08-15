@@ -11,20 +11,28 @@ class ChatRoom {
     }
     void sendMessages(int n) {
         // TODO: messagesSent와 ChatRoom.totalUsers 증가
+        messagesSent += n;
+        totalUsers += n;
     }
 }
 
 public class Q6 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("사용자 이름을 입력하세요");
         String name1 = sc.next();
+        System.out.println("메세지 갯수를 입력하세요");
         int m1 = sc.nextInt();
+        System.out.println("사용자 이름을 입력하세요");
         String name2 = sc.next();
+        System.out.println("메세지 갯수를 입력하세요");
         int m2 = sc.nextInt();
         ChatRoom u1 = new ChatRoom(name1);
         ChatRoom u2 = new ChatRoom(name2);
         u1.sendMessages(m1);
         u2.sendMessages(m2);
         // TODO: 각 사용자 이름과 messagesSent, ChatRoom.totalUsers 출력
+        System.out.println(u1.name + " " + u1.messagesSent + " " + ChatRoom.totalUsers );
+        System.out.println(u2.name + " " + u2.messagesSent + " " + ChatRoom.totalUsers );
     }
 }
