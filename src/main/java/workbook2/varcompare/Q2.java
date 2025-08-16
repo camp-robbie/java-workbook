@@ -5,7 +5,7 @@ import java.util.Scanner;
 // `Car` 클래스에 클래스 변수 `totalCars`와 인스턴스 변수 `name`을 선언하고, 객체를 생성할 때마다 `totalCars`를 증가시키는 프로그램을 작성
 // 3개의 자동차 객체를 생성하고 각 객체의 이름과 총 자동차 수를 출력
 class Car {
-    static int totalCars = 0;       // 생성된 객체의  총 개수를 세는 클래스 변수 totalCars
+    static int totalCars = 0;       // 생성된 객체의 총 개수를 세는 클래스 변수 totalCars
     String name;                    // 생성된 각 객체의 이름
 
     // 생성자
@@ -31,6 +31,6 @@ public class Q2 {
         System.out.println(c2.name + " " + Car.totalCars);      // c2의 인스턴스 변수 name과 Car.totalCars 출력
         System.out.println(c3.name + " " + Car.totalCars);      // c3의 인스턴스 변수 name과 Car.totalCars 출력
 
-        sc.close();         // 스캐너 닫기
+        sc.close();
     }
 }
