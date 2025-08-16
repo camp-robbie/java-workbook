@@ -1,5 +1,8 @@
 package main.java.workbook2.returntype;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 class Person {
@@ -12,7 +15,14 @@ class Person {
 }
 
 public class Q5 {
-    // TODO: olderPerson 메서드 작성 (두 Person 중 나이가 더 많은 객체를 반환)
+    public static Person olderPerson(Person p1, Person p2) {
+      return (p1.age > p2.age) ? p1 : p2;
+//      return Collections.max(Arrays.asList(p1, p2), Comparator.comparingInt(p -> p.age));
+//      return Arrays.asList(p1, p2).stream().max(Comparator.comparingInt(p -> p.age)).get();
+        }
+
+
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String name1 = sc.next();
@@ -21,7 +31,8 @@ public class Q5 {
         int age2 = sc.nextInt();
         Person p1 = new Person(name1, age1);
         Person p2 = new Person(name2, age2);
-        // Person older = olderPerson(p1, p2); // TODO: olderPerson 메서드 작성 후 주석 해제
-        // TODO: older.name과 older.age 출력
+        Person older = olderPerson(p1, p2);
+
+        System.out.println(older.name + " " + older.age);
     }
 }
