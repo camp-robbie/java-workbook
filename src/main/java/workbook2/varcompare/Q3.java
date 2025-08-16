@@ -22,7 +22,7 @@ public class Q3 {
         int n = sc.nextInt();                                   // 반복할 횟수(생성할 학생 수)를 입력받음
         for (int i = 0; i < n; i++) {                           // i는 0이고, i가 n보다 작을 동안 1씩 증가시키며 반복 수행
             String name = sc.next();                            // name을 입력받음
-            Student stu = new Student(name);                    // Student 객체 stu를 생성함
+            Student stu = new Student(name);                    // 입력받은 name을 바탕으로 Student 객체 stu를 생성함
             System.out.println(stu.name + " " + stu.id);        // stu 객체의 인스턴스 변수 name과 인스턴스 변수 id를 출력함
         }
     }
