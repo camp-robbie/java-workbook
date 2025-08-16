@@ -16,8 +16,9 @@ class Product {
     // 판매 메서드 sell
     void sell(int quantity) {
         // TODO: stock 감소, totalSold 증가
-        if (stock < quantity) {                  // 만약 stock이 quantity보다 작다면 (판매하려는 수량이 재고량보다 많다면)
+        if (stock < quantity) {                 // 만약 stock이 quantity보다 작다면 (판매하려는 수량이 재고량보다 많다면)
             System.out.println("재고 부족");     // 재고 부족을 출력함
+            return;                             // 종료함
         }
 
         stock -= quantity;                                // stock = stock - quantity
