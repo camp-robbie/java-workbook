@@ -16,7 +16,7 @@ class Product {
     // 판매 메서드 sell
     void sell(int quantity) {
         // TODO: stock 감소, totalSold 증가
-        if(stock < quantity) {                  // 만약 stock이 quantity보다 작다면 (판매하려는 수량이 재고량보다 많다면)
+        if (stock < quantity) {                  // 만약 stock이 quantity보다 작다면 (판매하려는 수량이 재고량보다 많다면)
             System.out.println("재고 부족");     // 재고 부족을 출력함
         }
 
@@ -34,9 +34,11 @@ public class Q4 {
         Product p = new Product(initialStock);  // 입력받은 initialStock 바탕으로 Product 객체 p 생성
 
         for (int i = 0; i < 2; i++) {           // i는 0이고, i가 0보다 작을동안 i를 1씩 증가시키면서 반복함
-            String cmd = sc.next();             // 할 작업을 입력받음 (이거 굳이 있어야 하나?)
-            int q = sc.nextInt();               // 판매 개수를 입력받음
-            p.sell(q);                          // p 객체의 매개변수를 q로 하는 sell 메서드를 호출함
+            String cmd = sc.next();             // 할 작업을 입력받음
+            if ("sell".equals(cmd)) {
+                int q = sc.nextInt();               // 판매 개수를 입력받음
+                p.sell(q);                          // p 객체의 매개변수를 q로 하는 sell 메서드를 호출함
+            }
         }
 
         // TODO: p.stock과 Product.totalSold 출력
