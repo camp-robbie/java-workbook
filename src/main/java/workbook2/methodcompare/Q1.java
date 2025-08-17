@@ -31,5 +31,7 @@ public class Q1 {
         int prod = calc.multiply(x, y);         // calc 객체의 인스턴스 메서드 multiply를 호출하여 곱셈 결과를 int형 변수 prod에 저장함
         // TODO: sum과 prod 출력
         System.out.println(sum + " " + prod);   // sum과 prod 결과를 출력함
+
+        sc.close();                             // 스캐너 닫기
     }
 }
