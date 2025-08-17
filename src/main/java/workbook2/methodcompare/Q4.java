@@ -27,5 +27,7 @@ public class Q4 {
 
         // TODO: StringUtil.isPalindrome 호출 후 출력
         System.out.println(StringUtil.isPalindrome(str));   // 결과를 출력함
+
+        sc.close();                                // 스캐너 닫기
     }
 }
