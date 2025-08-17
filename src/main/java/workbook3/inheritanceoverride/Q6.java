@@ -13,7 +13,7 @@ class FullTimeEmployee extends Employee {
     }
     double getPay() {
         // TODO: 정규직 급여 계산
-        return 0;
+        return monthlySalary;
     }
 }
 
@@ -25,7 +25,7 @@ class PartTimeEmployee extends Employee {
     }
     double getPay() {
         // TODO: 시간제 급여 계산
-        return 0;
+        return hourlyRate*hours;
     }
 }
 
@@ -34,25 +34,33 @@ public class Q6 {
         Scanner sc = new Scanner(System.in);
 
         // 첫 번째 직원
+        System.out.println("Full Time Job : 'full' 입력 | Part Time Job | 'part' 입력");
         String type1 = sc.next();
         Employee e1;
-        if (type1.equals("full")) {
+        if (type1.equals("full")) {              //full time 직원인 경우
+            System.out.println("임금 입력");
             double salary = sc.nextDouble();
             e1 = new FullTimeEmployee(salary);
-        } else { // type1 == "part"
+        } else {                                 // type1 == "part"
+            System.out.println("시급");
             double rate = sc.nextDouble();
+            System.out.println("노동 시간");
             double h = sc.nextDouble();
             e1 = new PartTimeEmployee(rate, h);
         }
 
         // 두 번째 직원
+        System.out.println("Full Time Job : 'full' 입력 | Part Time Job | 'part' 입력");
         String type2 = sc.next();
         Employee e2;
         if (type2.equals("full")) {
+            System.out.println("임금 입력");
             double salary = sc.nextDouble();
             e2 = new FullTimeEmployee(salary);
         } else {
+            System.out.println("시급");
             double rate = sc.nextDouble();
+            System.out.println("노동 시간");
             double h = sc.nextDouble();
             e2 = new PartTimeEmployee(rate, h);
         }
