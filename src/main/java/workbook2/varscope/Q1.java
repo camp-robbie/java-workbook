@@ -5,7 +5,7 @@ class Sample {
     String instanceVar = "instance";
     void printLocal() {
         String localVar = "local";
-        // TODO: localVar 출력
+        System.out.println(localVar);
     }
 }
 
@@ -13,6 +13,7 @@ public class Q1 {
     public static void main(String[] args) {
         Sample s = new Sample();
         s.printLocal();
-        // TODO: instanceVar와 classVar 출력
+        System.out.println(s.instanceVar);
+        System.out.println(Sample.classVar);
     }
 }
