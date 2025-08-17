@@ -5,13 +5,22 @@ import java.util.Scanner;
 class Vector2D {
     double x;
     double y;
-    Vector2D(double x, double y) { this.x = x; this.y = y; }
-    static double distance(Vector2D a, Vector2D b) {
-        // TODO: 두 벡터 사이 거리 반환
-        return 0;
+
+    Vector2D(double x, double y) {
+        this.x = x;
+        this.y = y;
     }
+
+    static double distance(Vector2D a, Vector2D b) {
+        double dx = a.x - b.x;
+        double dy = a.y - b.y;
+        return Math.sqrt (dx * dx + dy * dy);
+//      return Math.hypot(a.x - b.x, a.y - b.y);
+    }
+
     void add(Vector2D other) {
-        // TODO: 현재 벡터에 other를 더함
+        this.x += other.x;
+        this.y += other.y;
     }
 }
 
@@ -25,7 +34,10 @@ public class Q6 {
         Vector2D v1 = new Vector2D(x1, y1);
         Vector2D v2 = new Vector2D(x2, y2);
         double dist = Vector2D.distance(v1, v2);
+        System.out.println(dist);
+        System.out.println(v1.x + " " + v1.y);
+
         v1.add(v2);
-        // TODO: dist와 v1.x, v1.y 출력
+        System.out.println(v1.x + " " + v1.y);
     }
 }
