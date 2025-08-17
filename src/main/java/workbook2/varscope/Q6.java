@@ -9,11 +9,14 @@ class Bank {
         this.balance = balance;
         totalBalance += balance;
     }
+
     void deposit(int amount) {
-        // TODO: balance와 totalBalance 증가
+        balance += amount;
+        totalBalance += amount;
     }
     void withdraw(int amount) {
-        // TODO: balance와 totalBalance 감소
+        balance -= amount;
+        totalBalance -= amount;
     }
 }
 
@@ -24,10 +27,16 @@ public class Q6 {
         int bal2 = sc.nextInt();
         Bank acc1 = new Bank(bal1);
         Bank acc2 = new Bank(bal2);
-        String op1 = sc.next();
-        int id1 = sc.nextInt();
-        int amt1 = sc.nextInt();
-        // 첫 번째 명령 처리
-        // 두 번째 명령 처리 후 Bank.totalBalance 출력
+
+        for (int i = 0; i < 2; i++) {
+            String op = sc.next();
+            int id = sc.nextInt();
+            int amt = sc.nextInt();
+            Bank target = (id == 1) ? acc1 : acc2;
+            if (op.equals("deposit")) target.deposit(amt);
+            else target.withdraw(amt);
+        }
+            System.out.println(Bank.totalBalance);
+        }
     }
-}
+
