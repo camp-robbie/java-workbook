@@ -25,7 +25,6 @@ public class Q2 {
        }
         System.out.println(positiveCounts + " " + negativeSum);
 
-       // 갯수를 세는 코드를 몰라 답지를 보고 적었습니다 (positiveCounts++)
 
     }
 }
