@@ -3,16 +3,23 @@ package main.java.workbook3.accesslevel;
 import java.util.Scanner;
 
 class LibraryBook {
-    String title;
-    String author;
+    //private 변수
+    private String title;
+    private String author;
 
+    //생성자
     LibraryBook(String title, String author) {
         this.title = title;
         this.author = author;
     }
-
-    // TODO: title getter
-    // TODO: author getter
+    //제목 getter 메서드
+    public String getTitle() {
+        return title;
+    }
+    //작가 getter 메서드
+    public String getAuthor() {
+        return author;
+    }
 }
 
 public class Q4 {
@@ -20,10 +27,14 @@ public class Q4 {
         Scanner sc = new Scanner(System.in);
         LibraryBook[] books = new LibraryBook[3];
         for (int i = 0; i < 3; i++) {
-            String t = sc.next();
-            String a = sc.next();
+            String t = sc.next();               //책 제목 입력
+            String a = sc.next();               //저자 입력
             books[i] = new LibraryBook(t, a);
         }
-        // TODO: 등록한 모든 도서들의 title, author를 출력
+        for (LibraryBook b : books) {
+            System.out.println(b.getTitle() + " " + b.getAuthor());
+        }
+
+        sc.close();
     }
 }
