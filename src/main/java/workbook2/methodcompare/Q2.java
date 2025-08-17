@@ -25,7 +25,7 @@ public class Q2 {
 
         int sq = MathUtil.square(n);            // MathUtil 클래스의 클래스 메서드 square를 호출함
 
-        MathUtil util = new MathUtil();         // MathUtil 타입의 util 객체를 생성함 (생성자를 생성하지 않았을 경우, 기본 생성자는 자동으로 만들어줌)
+        MathUtil util = new MathUtil();         // MathUtil 타입의 util 객체를 생성함 (생성자를 생성하지 않았을 경우, 기본 생성자는 자동으로 만들어짐)
         int cu = util.cube(n);                  // util 객체의 인스턴스 메서드 cube를 호출하여 결과를 int형 변수 cu에 저장함
         // TODO: sq와 cu 출력
         System.out.println(sq + " " + cu);      // sq와 cu 결과를 출력함
