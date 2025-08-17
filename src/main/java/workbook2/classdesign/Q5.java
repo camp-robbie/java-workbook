@@ -66,6 +66,5 @@ public class Q5 {
         } finally { // 항상 실행
             sc.close(); // 자원 누수 방지
         }
-
     }
 }
