@@ -26,7 +26,7 @@ public class Q1 {
 
         int sum = Calculator.add(x, y);         // Calculator 클래스의 클래스 메서드 add를 호출하여 덧셈한 결과를 int형 변수 sum에 저장함
 
-        Calculator calc = new Calculator();     // Calculator 타입의 calc 객체를 생성함 (생성자를 생성하지 않았을 경우, 기본 생성자는 자동으로 만들어줌)
+        Calculator calc = new Calculator();     // Calculator 타입의 calc 객체를 생성함 (생성자를 생성하지 않았을 경우, 기본 생성자는 자동으로 만들어짐)
 
         int prod = calc.multiply(x, y);         // calc 객체의 인스턴스 메서드 multiply를 호출하여 곱셈 결과를 int형 변수 prod에 저장함
         // TODO: sum과 prod 출력
