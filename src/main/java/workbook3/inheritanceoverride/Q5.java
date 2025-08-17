@@ -28,6 +28,8 @@ class SavingsAccount extends Account {
     @Override
     void deposit(int amount) {
         // TODO: 5 % 이자 포함 로직 작성
+        balance += amount;
+        balance =(int) (balance *1.05);
     }
 }
 
@@ -40,6 +42,8 @@ class CheckingAccount extends Account {
     @Override
     void withdraw(int amount) {
         // TODO: 1 % 수수료 차감 로직 작성
+        balance -= amount;
+        balance = (int) (balance*0.99);
     }
 }
 
@@ -52,11 +56,11 @@ public class Q5 {
         int initBal = sc.nextInt();
 
         // TODO: 아래 [알맞은 타입 선언]에 알맞은 타입을 선언 후 주석 해제
-        /*
-        [알맞은 타입 선언] acc = kind.equals("saving")
+
+        Account acc = kind.equals("saving")
                 ? new SavingsAccount(initBal)
                 : new CheckingAccount(initBal);
-        */
+
 
         /* ---------- 명령 반복 ---------- */
         while (sc.hasNext()) {
@@ -65,11 +69,11 @@ public class Q5 {
 
             // TODO: 계좌 생성 주석 해제 후 아래 주석 해제
             if (cmd.equals("deposit")) {
-                // acc.deposit(amount);
+                 acc.deposit(amount);
             } else { // withdraw
-                // acc.withdraw(amount);
+                 acc.withdraw(amount);
             }
-            // System.out.println(acc.balance);
+            System.out.println(acc.balance);
         }
     }
 }
