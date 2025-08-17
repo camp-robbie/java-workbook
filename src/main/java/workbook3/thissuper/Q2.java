@@ -6,9 +6,13 @@ class Box {
     int width, height, depth;
     Box() {
         // TODO: 매개변수 생성자 호출하여 1,1,1로 초기화
+        this(1,1,1);                    // 생성자 안에서 다른 생성자 호출할 때 : this() 사용
     }
     Box(int w, int h, int d) {
         // TODO: 멤버 초기화
+        width=w;
+        height=h;
+        depth=d;
     }
 }
 

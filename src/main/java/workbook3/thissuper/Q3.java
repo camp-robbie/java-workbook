@@ -11,9 +11,10 @@ class Animal {
     }
 }
 
-class Dog /* TODO: Animal 클래스 상속 */ {
+class Dog extends Animal /* TODO: Animal 클래스 상속 */ {
     Dog(String name) {
         // TODO: super() 호출
+        super(name);
         System.out.println("Dog constructor");
     }
 }
@@ -24,6 +25,6 @@ public class Q3 {
         String n = sc.next();
          Dog dog = new Dog(n);
          // TODO: Dog 클래스 완성 후 아래 주석 해제
-         // System.out.println(dog.name);
+         System.out.println(dog.name);
     }
 }
