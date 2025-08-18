@@ -7,12 +7,18 @@ class Car {
     int price;
     Car() {
         // TODO
+        this.model = "Unknown";
+        this.price = 0;
     }
     Car(String model, int price) {
         // TODO
+        this.model = model;
+        this.price = price;
     }
     Car(int price) {
         // TODO
+        this.model = "Unknown";
+        this.price = price;
     }
 }
 

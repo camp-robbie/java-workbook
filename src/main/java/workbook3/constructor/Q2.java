@@ -6,9 +6,12 @@ class Point {
     int x, y;
     Point() {
         // TODO: 기본 생성자에서 x,y 초기화
+        int x, y;
     }
     Point(int x, int y) {
         // TODO: 매개변수 생성자에서 x,y 초기화
+        this.x = x;
+        this.y = y;
     }
 }
 

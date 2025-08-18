@@ -5,9 +5,11 @@ import java.util.Scanner;
 class BankAccount {
     static {
         // TODO: 은행 이름 출력
+        System.out.println("Bank Opened"); // static 블록
     }
     {
         // TODO: 계좌 개설 메시지 출력
+        System.out.println("Account Created"); // 인스턴스 초기화 블록
     }
     int balance;
     BankAccount(int balance) {

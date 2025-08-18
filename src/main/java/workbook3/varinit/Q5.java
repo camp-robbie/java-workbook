@@ -6,14 +6,17 @@ class InitPerson {
     static int counter = 0;
     static {
         // TODO: "class loaded" 출력
+        System.out.println("class loaded"); // static 블록
     }
     String name;
     int id;
     {
         // TODO: id 부여
+        id = ++counter; // 인스턴스 초기화 블록에서 id 증가
     }
     InitPerson(String name) {
         // TODO: name 초기화
+        this.name = name;
     }
 }
 
