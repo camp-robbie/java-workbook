@@ -47,5 +47,7 @@ public class Q6 {
 
         // TODO: dist와 v1.x, v1.y 출력
         System.out.println(dist + " " + (int)v1.x + " " + (int)v1.y);   // 결과를 출력함 (같은 출력을 얻기 위해 int형으로 형변환)
+
+        sc.close();                                     // 스캐너 닫기
     }
 }
