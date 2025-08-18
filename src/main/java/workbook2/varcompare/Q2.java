@@ -8,6 +8,13 @@ class Car {
     Car(String name) {
         this.name = name;
         // TODO: totalCars 증가
+        static int totalCars = 0;
+        String name;
+
+        Car(String name){
+            this.name = name;
+            totalCars++;
+        }
     }
 }
 

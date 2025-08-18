@@ -4,6 +4,8 @@ class Counter {
     static int count = 0;
     int id;
     Counter() {
+        count++;
+        id = count;
         // TODO: count 증가 후 id에 할당
     }
 }
