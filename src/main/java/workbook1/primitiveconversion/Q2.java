@@ -17,7 +17,7 @@ public class Q2 {
         // 혹은 박스개념으로 형변환 가능(업캐스팅, 다운 캐스팅)
         double bigbox = sc.nextInt();
         int smallBox = (int) bigbox;
-        result2 = bigbox - smallbox;
+        double result2 = bigbox - smallBox;
 
         System.out.println("실수 - 정수 = " + result2);
     }
