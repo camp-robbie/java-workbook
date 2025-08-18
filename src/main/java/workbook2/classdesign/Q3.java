@@ -7,8 +7,17 @@ class Book {
     String author;
     int price;
     // TODO: 생성자 작성
+    public Book(String title, String author, int price) {
+        this.title = title;
+        this.author = author;
+        this.price = price;
+    }
+
     void printInfo() {
         // TODO: 정보 출력
+        System.out.print("Title: " + this.title + ", ");
+        System.out.print("Author: " + this.author + ", ");
+        System.out.println("Price: " + this.price);
     }
 }
 
@@ -21,9 +30,9 @@ public class Q3 {
         String t2 = sc.next();
         String a2 = sc.next();
         int p2 = sc.nextInt();
-        // Book b1 = new Book(t1, a1, p1); // TODO: 생성자 작성 후 주석 해제
-        // Book b2 = new Book(t2, a2, p2); // TODO: 생성자 작성 후 주석 해제
-        // b1.printInfo(); // TODO: 생성자 작성 후 주석 해제
-        // b2.printInfo(); // TODO: 생성자 작성 후 주석 해제
+        Book b1 = new Book(t1, a1, p1); // TODO: 생성자 작성 후 주석 해제
+        Book b2 = new Book(t2, a2, p2); // TODO: 생성자 작성 후 주석 해제
+        b1.printInfo(); // TODO: 생성자 작성 후 주석 해제
+        b2.printInfo(); // TODO: 생성자 작성 후 주석 해제
     }
 }
