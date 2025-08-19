@@ -18,3 +18,5 @@ public class Q1 {
         System.out.println(c2.id + " " + Counter.count);
     }
 }
+
+// 주석
