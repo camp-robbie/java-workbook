@@ -21,7 +21,7 @@ public class Q1 {
         int sum = Calculator.add(x, y);
         Calculator calc = new Calculator();
         int prod = calc.multiply(x, y);
-        // TODO: sum과 prod 출력
+        // TODO: sum과 prod 출력.
 
         System.out.println(sum + " " + prod);
     }
