@@ -3,11 +3,18 @@ package main.java.workbook3.varinit;
 class InitDemo {
     int a = 10;
     int b;
+
     {
-        // TODO: b 초기화
+        a = 10;
     }
+
+    {
+        b = 20;
+    }
+
     InitDemo() {
-        // TODO: a와 b의 합 출력
+        int sum = a + b;
+        System.out.println(sum);
     }
 }
 

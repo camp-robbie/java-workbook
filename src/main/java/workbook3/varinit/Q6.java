@@ -3,13 +3,12 @@ package main.java.workbook3.varinit;
 import java.util.Scanner;
 
 class BankAccount {
-    static {
-        // TODO: 은행 이름 출력
-    }
-    {
-        // TODO: 계좌 개설 메시지 출력
-    }
+    static { System.out.println("KB Bank"); }
+
+    { System.out.println("Account created"); }
+
     int balance;
+
     BankAccount(int balance) {
         this.balance = balance;
     }
