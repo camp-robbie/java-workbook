@@ -7,10 +7,10 @@ public class Q3 {
         Scanner sc = new Scanner(System.in);
         double x = sc.nextDouble();
         double y = sc.nextDouble();
-<<<<<<< HEAD
+
         // TODO: x > y 결과와 !(x > y) 결과 출력
-=======
         // TODO: x > y 결과와 !(x < y) 결과 출력
+
         if (x > y) {
             System.out.print(true + " ");
         } else {
@@ -22,12 +22,5 @@ public class Q3 {
         } else {
             System.out.print(false);
         }
-
-//        System.out.println(!(x > y));
-
-//        boolean result = x > y;
-//        System.out.println(result + " " +!result);
-
->>>>>>> step1/operators
     }
 }

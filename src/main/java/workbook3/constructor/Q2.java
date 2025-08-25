@@ -4,11 +4,15 @@ import java.util.Scanner;
 
 class Point {
     int x, y;
+
     Point() {
-        // TODO: 기본 생성자에서 x,y 초기화
+        this.x = 0;
+        this.y = 0;
     }
+
     Point(int x, int y) {
-        // TODO: 매개변수 생성자에서 x,y 초기화
+        this.x = x;
+        this.y = y;
     }
 }
 

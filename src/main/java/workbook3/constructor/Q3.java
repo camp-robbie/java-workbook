@@ -5,14 +5,19 @@ import java.util.Scanner;
 class Car {
     String model;
     int price;
+
     Car() {
-        // TODO
+        this.model = "unknown";
+        this.price = 0;
     }
+
     Car(String model, int price) {
-        // TODO
+        this.model = model;
+        this.price = price;
     }
     Car(int price) {
-        // TODO
+        this.model = "unknown";
+        this.price = price;
     }
 }
 
